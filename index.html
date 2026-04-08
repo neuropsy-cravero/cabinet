@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinet de Neuropsychologie & Psychothérapie TCC</title>  <style>
+    :root {
+      --primary: #2f5d62;
+      --secondary: #5e8b7e;
+      --accent: #cfe7e5;
+      --light: #f7f9f8;
+      --dark: #243333;
+      --focus: #1d7a85;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      line-height: 1.75;
+      color: var(--dark);
+      background: var(--light);
+      width:790px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* =========================
+       ACCESSIBILITÉ
+    ========================= */
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* =========================
+       HEADER STICKY
+    ========================= */
+    .top-fixed {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: white;
+    }
+
+    /* =========================
+       BANNIÈRE
+    ========================= */
+    .banner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 0 0 14px 14px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+    header {
+      border-bottom: 1px solid #e0e0e0;
+      background: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1.1rem 1.4rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.3rem 0;
+    }
+
+    nav a.active {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+    section {
+      padding: 3.2rem 0;
+/*      scroll-margin-top: 350px;  CORRECTION PRINCIPALE */
+      scroll-margin-top: 22rem; /* CORRECTION PRINCIPALE */
+    }
+
+    @media (max-width: 768px) {
+      section {
+        scroll-margin-top: 220px;
+      }
+    }
+
+    section:nth-of-type(even) {
+      background: white;
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.45rem; }
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1.4rem;
+    }
+
+    p {
+      max-width: 900px;
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+
+    .highlight {
+      background: var(--accent);
+      padding: 1.2rem 1.4rem;
+      border-left: 4px solid var(--secondary);
+      border-radius: 6px;
+      margin: 1.6rem 0;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+      padding: 2.0rem 0 2.0rem 0;
+      text-align: center;
+    }
+
+    .hero p {
+      margin: auto;
+      font-size: 1.02rem;
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin-bottom: -0.5rem;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+    .contact-box {
+      background: var(--accent);
+      padding: 1.6rem 1.8rem;
+      border-radius: 8px;
+      max-width: 700px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      background: #1f2f2f;
+      color: #d6dede;
+      padding: 3rem 1rem;
+    }
+
+    footer h3 { color: #ffffff; }
+    footer p { font-size: 0.88rem; }
+
+/* =========================
+   MENU RESPONSIVE
+========================= */
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--dark);
+  transition: 0.3s ease;
+}
+
+/* ---------- TABLETTE & MOBILE ---------- */
+@media (max-width: 700px) {
+
+  .main-nav {
+    justify-content: flex-end;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .main-nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    border-bottom: 1px solid #e0e0e0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .main-nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav ul a {
+    display: block;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .main-nav.open ul {
+    max-height: 500px;
+  }
+
+  /* Animation burger */
+  .main-nav.open .burger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .main-nav.open .burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .main-nav.open .burger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+  </style></head><body><div class="top-fixed">
+  <div class="banner">
+    <img src="Banner_v05.png" alt="Cabinet de neuropsychologie">
+  </div>  <header>
+    <div class="container">
+      <nav class="main-nav" aria-label="Navigation principale">
+  <button class="burger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="menu-list">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul id="menu-list">
+    <li><a href="#presentation">Votre thérapeute</a></li>
+    <li><a href="#neuropsy">Neuropsychologie</a></li>
+    <li><a href="#tcc">Thérapies TCC</a></li>
+    <li><a href="#tarifs">Actes & tarifs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
+  </header>
+</div><section class="hero">
+  <div class="container">
+    <h1>Comprendre, accompagner et soutenir durablement</h1>
+    <p>Cabinet de neuropsychologie et de psychothérapie cognitivo-comportementale (TCC).</p>
+  </div>
+</section>
+
+<section id="presentation">
+  <div class="container">
+    <h2>Votre thérapeute</h2>
+
+    <p>Je suis <strong>Julien Cravero</strong>, neuropsychologue et psychothérapeute TCC, diplômé d’un Master 2 de psychologie, titulaire du titre de psychologue obtenu à l’Université de Reims, et diplômé en psychothérapie TCC à l’<abbr title="Association Française de Thérapie Comportementale et Cognitive">AFTCC</abbr>.</p>
+
+    <p>Mon cabinet accueille tous les publics, enfants, adolescents et adultes, pour un accompagnement personnalisé et adapté à chacun.</p>
+
+    <h3>Une approche clinique scientifique et humaniste</h3>
+    <p>Mon approche combine <strong>rigueur scientifique</strong> et <strong>écoute bienveillante</strong> :</p>
+    <ul>
+      <li><strong>Scientifique :</strong> interventions basées sur des outils validés et des bilans standardisés.</li>
+      <li><strong>Humaniste :</strong> respect du rythme, de la singularité et des ressources de chaque personne.</li>
+    </ul>
+
+    <h3>Mes valeurs clés</h3>
+    <ul>
+      <li>Bienveillance</li>
+      <li>Respect de la singularité</li>
+      <li>Transparence et confiance</li>
+      <li>Collaboration</li>
+      <li>Pragmatisme</li>
+    </ul>
+
+    
+    <div class="highlight">
+      <p>« Bienvenue dans mon cabinet. Mon objectif est de vous accompagner avec <strong>écoute, rigueur et respect</strong>, pour mieux comprendre vos forces et vos difficultés, et construire des stratégies concrètes et durables pour votre quotidien. Ici, chaque parcours est unique et traité avec attention et bienveillance. »</p>
+    </div>
+  </div>
+</section>
+
+<section id="neuropsy">
+  <div class="container">
+    <h2>La neuropsychologie</h2>
+
+    <p>Le neuropsychologue est un psychologue spécialisé dans l’étude du fonctionnement cognitif, émotionnel et comportemental, en lien avec le fonctionnement du cerveau. En cabinet libéral, il accompagne enfants, adolescents et adultes présentant des difficultés qui impactent la vie quotidienne, scolaire, professionnelle ou relationnelle.</p>
+
+    <h3>Quand consulter un neuropsychologue ?</h3>
+    <ul>
+      <li>Difficultés d’attention, de concentration ou d’organisation</li>
+      <li>Troubles de la mémoire ou du raisonnement</li>
+      <li>Difficultés d’apprentissage (lecture, écriture, calcul)</li>
+      <li>Suspicion de troubles du neurodéveloppement (TDAH, TSA, troubles spécifiques des apprentissages)</li>
+      <li>Troubles cognitifs après un événement médical (AVC, traumatisme crânien, maladie neurologique)</li>
+      <li>Difficultés émotionnelles ou comportementales ayant un retentissement cognitif</li>
+      <li>Besoin de mieux comprendre son fonctionnement intellectuel et cognitif</li>
+    </ul>
+
+    <h3>Le bilan neuropsychologique</h3>
+    <p>Le bilan neuropsychologique est une évaluation approfondie des fonctions cognitives. Il se déroule généralement en plusieurs étapes :</p>
+    <ol>
+      <li><strong>Entretien clinique :</strong> comprendre la demande, l’histoire et le contexte de vie.</li>
+      <li><strong>Passation de tests standardisés :</strong> attention, mémoire, langage, raisonnement, fonctions exécutives.</li>
+      <li><strong>Analyse et interprétation :</strong> prise en compte de l’âge, du parcours et du fonctionnement global.</li>
+      <li><strong>Restitution :</strong> restitution orale claire et compte rendu écrit, avec recommandations concrètes.</li>
+    </ol>
+
+    <h3>Accompagnement et suivi</h3>
+    <p>Après le bilan, le neuropsychologue peut proposer :</p>
+    <ul>
+      <li>Suivi en remédiation cognitive</li>
+      <li>Stratégies pour compenser les difficultés au quotidien</li>
+      <li>Accompagnement psychoéducatif</li>
+      <li>Conseils pour la scolarité, le travail ou la vie quotidienne</li>
+      <li>Orientation vers d’autres professionnels si nécessaire</li>
+    </ul>
+
+    <h3>Le neuropsychologue en exercice libéral</h3>
+    <p>Le neuropsychologue libéral travaille de manière indépendante, dans un cadre confidentiel et respectueux du code de déontologie des psychologues. Il peut collaborer, avec l’accord du patient, avec médecins, enseignants, orthophonistes, psychomotriciens ou autres professionnels de santé. Son rôle est d’apporter un regard clinique spécialisé centré sur la compréhension du fonctionnement cognitif et l’amélioration de la qualité de vie.</p>
+
+    <h3>Une approche humaine et scientifique</h3>
+    <p>L’intervention repose sur des outils validés scientifiquement, une écoute attentive, une alliance thérapeutique basée sur la confiance, et le respect du rythme et des objectifs de chacun. L’objectif est d’aider chaque personne à mieux se comprendre, valoriser ses ressources et mettre en place des solutions durables et adaptées à son quotidien.</p>
+  </div>
+</section>
+
+<section id="tcc">
+  <div class="container">
+    <h2>Les psychothérapies TCC</h2>
+
+    <p>Le psychothérapeute TCC (Thérapie Cognitivo-Comportementale) accompagne les personnes qui rencontrent des difficultés émotionnelles, comportementales ou relationnelles. En cabinet libéral, il propose un accompagnement personnalisé pour comprendre les mécanismes qui entretiennent la souffrance et mettre en place des stratégies concrètes pour améliorer le quotidien.</p>
+
+    <h3>Quand consulter un psychothérapeute TCC ?</h3>
+    <ul>
+      <li>Anxiété, stress, crises d’angoisse</li>
+      <li>Dépression, humeur dépressive</li>
+      <li>Troubles du sommeil</li>
+      <li>Troubles alimentaires</li>
+      <li>Gestion des émotions et impulsivité</li>
+      <li>Conduites addictives ou comportements problématiques</li>
+      <li>Problèmes relationnels ou difficultés sociales</li>
+    </ul>
+
+    <h3>Déroulement d’une thérapie TCC</h3>
+    <ol>
+      <li><strong>Entretien initial et évaluation :</strong> comprendre la situation, les difficultés et les objectifs de la personne.</li>
+      <li><strong>Élaboration d’un plan thérapeutique :</strong> définition d’objectifs concrets et réalistes adaptés à la vie quotidienne.</li>
+      <li><strong>Séances structurées et collaboratives :</strong> techniques validées scientifiquement (identification des pensées automatiques, restructuration cognitive, exercices comportementaux, techniques de relaxation).</li>
+      <li><strong>Exercices à domicile et suivi des progrès :</strong> outils pratiques transférables au quotidien.</li>
+      <li><strong>Évaluation et ajustement :</strong> suivi des progrès et adaptation du plan thérapeutique selon les besoins.</li>
+    </ol>
+
+    <h3>Le psychothérapeute TCC en libéral</h3>
+    <p>Le psychothérapeute travaille de façon indépendante, dans un cadre confidentiel et respectueux du code de déontologie. Il peut collaborer avec d’autres professionnels (médecins, psychologues, orthophonistes, enseignants) pour un suivi coordonné, avec l’accord de la personne.</p>
+
+    <h3>Une approche humaine et scientifique</h3>
+    <p>Les TCC reposent sur des techniques validées scientifiquement, une démarche structurée et orientée solutions, et une alliance thérapeutique basée sur la confiance et le respect du rythme de la personne. L’objectif est de favoriser un changement durable et d’aider chacun à mieux comprendre ses comportements et émotions, en développant des stratégies adaptées au quotidien.</p>
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="container">
+    <h2>Actes proposés & tarifs</h2>
+
+    <h3>Bilan neuropsychologique</h3>
+    <p>Évaluation complète incluant entretien clinique, passation de tests standardisés et restitution détaillée. Ce bilan permet de comprendre les difficultés cognitives et de proposer des recommandations concrètes.</p>
+
+    <h3>Suivi neuropsychologique</h3>
+    <p>Séances de remédiation cognitive et d’accompagnement personnalisé pour renforcer les compétences cognitives et optimiser le fonctionnement quotidien.</p>
+
+    <h3>Psychothérapie TCC</h3>
+    <p>Séances individuelles structurées, orientées vers des objectifs précis et des stratégies pratiques pour mieux gérer émotions, comportements et situations difficiles.</p>
+
+    <h3>Tarifs et remboursement</h3>
+    <p>Les tarifs sont communiqués lors du premier contact. Certaines mutuelles peuvent proposer une prise en charge partielle. Le paiement se fait généralement à la séance, en espèces, chèque ou virement.</p>
+
+    <div class="highlight">
+      <p>Pour obtenir des informations précises sur les tarifs ou pour prendre rendez-vous, merci de me contacter directement par téléphone ou via une plateforme sécurisée.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <h3>Mentions légales</h3>
+    <p>Cabinet de Neuropsychologie & Psychothérapie TCC – Exercice libéral – France</p>
+    <h3>Données personnelles – RGPD</h3>
+    <p>Ce site ne collecte aucune donnée personnelle.</p>
+    <p>© 2025 – Tous droits réservés</p>
+  </div>
+</footer><script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 320;
+    if (pageYOffset >= sectionTop) current = section.id;
+  });
+
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+
+<script>
+const nav = document.querySelector('.main-nav');
+const burger = document.querySelector('.burger');
+const menuLinks = document.querySelectorAll('.main-nav a');
+
+burger.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', isOpen);
+});
+
+// Ferme le menu après clic
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+  });
+});
+
+// Ferme avec ESC
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    nav.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+  }
+});
+</script>
+</body>
+</html>
