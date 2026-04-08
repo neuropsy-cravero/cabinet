@@ -45,7 +45,7 @@ section {
   padding:2rem 0;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   color:var(--primary);
   margin-bottom:0.6rem;
 }
@@ -53,6 +53,7 @@ h1,h2,h3 {
 h1 { font-size:clamp(1.5rem,4vw,2rem); }
 h2 { font-size:clamp(1.2rem,3.5vw,1.7rem); }
 h3 { font-size:clamp(1rem,3vw,1.3rem); margin-top:1rem; }
+h4 { font-size:clamp(1rem,2.5vw,1.2rem); margin-top:0.5rem; }
 
 p {
   margin-bottom:0.7rem;
@@ -74,6 +75,7 @@ li {
   padding:1.6rem 0 1.2rem;
 }
 
+/* HIGHLIGHT BLOCK */
 .highlight {
   background:var(--accent);
   padding:1rem;
@@ -87,7 +89,7 @@ li {
   gap:0.5rem;
 }
 
-/* NAVIGATION */
+/* HEADER & NAV */
 header {
   position:sticky;
   top:0;
@@ -97,6 +99,11 @@ header {
   box-shadow:0 1px 4px rgba(0,0,0,0.1);
 }
 
+nav {
+  position:relative;
+  background:#006EBF;
+}
+
 nav ul {
   display:flex;
   justify-content:center;
@@ -104,6 +111,7 @@ nav ul {
   list-style:none;
   padding:0.8rem 0;
   margin:0;
+  transition:max-height 0.3s ease;
 }
 
 nav a {
@@ -118,6 +126,20 @@ nav a:hover,
 nav a:focus-visible {
   color:var(--primary);
   outline:none;
+}
+
+/* HAMBURGER */
+.nav-toggle {
+  display:none;
+  position:absolute;
+  right:1rem;
+  top:50%;
+  transform:translateY(-50%);
+  background:none;
+  border:none;
+  font-size:1.8rem;
+  color:white;
+  cursor:pointer;
 }
 
 /* FOOTER */
@@ -163,44 +185,37 @@ section[id] {
   display:block;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
-@media (max-width:900px){
-  .container {
-    padding:0.8rem;
-  }
+/* RESPONSIVE */
+@media (max-width:900px) {
+  .container { padding:0.8rem; }
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
+  .nav-toggle { display:block; }
   nav ul {
     flex-direction:column;
-    gap:0.8rem;
+    max-height:50px;
+    overflow:hidden;
     padding:0.5rem 0;
   }
-
+  nav ul.show { max-height:500px; }
   nav a {
     font-size:1rem;
     text-align:center;
+    display:block;
+    padding:0.5rem 0;
   }
-
-  section[id] {
-    scroll-margin-top: 120px;
-  }
-
+  section[id] { scroll-margin-top:120px; }
   h1 { font-size:clamp(1.4rem,5vw,1.8rem); }
   h2 { font-size:clamp(1.1rem,4vw,1.5rem); }
   h3 { font-size:clamp(0.95rem,3.5vw,1.2rem); }
-
+  h4 { font-size:clamp(0.9rem,3vw,1.1rem); }
   p { font-size:clamp(0.9rem,2.8vw,1rem); }
-
-  .highlight .btn-rdv {
-    max-width:100%;
-  }
+  .highlight .btn-rdv { max-width:100%; }
 }
 
-@media (max-width:400px){
-  nav a {
-    font-size:0.95rem;
-  }
+@media (max-width:400px) {
+  nav a { font-size:0.95rem; }
 }
 
 </style>
@@ -210,15 +225,16 @@ section[id] {
 
 <header>
   <div class="banner">
-    <img src="Banner_v05.png" alt="Cabinet de neuropsychologie à proximité de Reims, Châlons, Epernay et Vitry" style="width:100%;">
+    <img src="Banner_v05.png" alt="Cabinet de neuropsychologie à proximité de Reims, Châlons, Epernay et Vitry">
   </div>
 
-  <nav aria-label="Navigation principale" style="background:#006EBF;">
+  <nav aria-label="Navigation principale">
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
     <ul>
-      <li><a href="#presentation" style="color:white;"><b>Votre neuropsychologue</b></a></li>
-      <li><a href="#neuropsy" style="color:white;"><b>Neuropsychologie</b></a></li>
-      <li><a href="#tarifs" style="color:white;"><b>Actes & tarifs</b></a></li>
-      <li><a href="#contact" style="color:white;"><b>Contact</b></a></li>
+      <li><a href="#presentation">Votre neuropsychologue</a></li>
+      <li><a href="#neuropsy">Neuropsychologie</a></li>
+      <li><a href="#tarifs">Actes & tarifs</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -227,196 +243,136 @@ section[id] {
 
 <!-- HERO -->
 <section class="hero">
-<div class="container">
-
-<h1>Psychologue spécialisé en neuropsychologie</h1>
-<h4>À proximité de Reims, Châlons-en-Champagne, Epernay et Vitry-le-François</h4>
-
-<p  style="text-align:justify;">
-Le cabinet propose des bilans neuropsychologiques et un accompagnement des difficultés cognitives chez l’adolescent (à partir de 12 ans) et l’adulte.
-</p>
-
-<p  style="text-align:justify;">
-L’objectif est de comprendre le fonctionnement cognitif, d’identifier les difficultés et de proposer des solutions concrètes adaptées au quotidien.
-</p>
-
-<h2 style="background:#FE8807;color: white;">Comprendre, accompagner et soutenir durablement</h2>
-
-</div>
+  <div class="container">
+    <h1>Psychologue spécialisé en neuropsychologie</h1>
+    <h4>À proximité de Reims, Châlons-en-Champagne, Epernay et Vitry-le-François</h4>
+    <p style="text-align:justify;">
+      Le cabinet propose des bilans neuropsychologiques et un accompagnement des difficultés cognitives chez l’adolescent (à partir de 12 ans) et l’adulte.
+    </p>
+    <p style="text-align:justify;">
+      L’objectif est de comprendre le fonctionnement cognitif, d’identifier les difficultés et de proposer des solutions concrètes adaptées au quotidien.
+    </p>
+    <h2 style="background:#FE8807;color:white;">Comprendre, accompagner et soutenir durablement</h2>
+  </div>
 </section>
 
 <!-- PRESENTATION -->
 <section id="presentation">
-<div class="container">
-
-<h2>Votre neuropsychologue</h2>
-
-<p>
-Je suis <strong>Julien Cravero</strong>, neuropsychologue diplômé de l’Université de Reims (Master psychologie clinique, psychopathologie et neuropsychologie de l’adulte).
-</p>
-
-<p>
-J’accompagne des patients venant de <strong>Reims, Châlons-en-Champagne et Vitry-le-François</strong> pour l’évaluation et la compréhension des difficultés cognitives.
-</p>
-
-<p>
-Mon travail consiste à analyser les liens entre le fonctionnement du cerveau, les capacités cognitives (attention, mémoire, raisonnement, organisation), les émotions et leurs répercussions dans la vie quotidienne.
-</p>
-
-<h3>Une approche clinique rigoureuse</h3>
-
-<ul>
-  <li>Tests standardisés validés scientifiquement</li>
-  <li>Analyse précise du profil cognitif</li>
-  <li>Prise en compte du contexte personnel et environnemental</li>
-</ul>
-
-<h3>Objectifs des consultations</h3>
-
-<ul>
-  <li>Comprendre l’origine des difficultés</li>
-  <li>Identifier les ressources et fragilités</li>
-  <li>Mettre en place des stratégies adaptées</li>
-  <li>Orienter vers les professionnels si nécessaire</li>
-</ul>
-
-<div class="highlight">
-<p>
-Le bilan neuropsychologique constitue une étape clé pour comprendre le fonctionnement global et orienter les démarches de prise en charge.
-</p>
-</div>
-
-</div>
+  <div class="container">
+    <h2>Votre neuropsychologue</h2>
+    <p>Je suis <strong>Julien Cravero</strong>, neuropsychologue diplômé de l’Université de Reims (Master psychologie clinique, psychopathologie et neuropsychologie de l’adulte).</p>
+    <p>J’accompagne des patients venant de <strong>Reims, Châlons-en-Champagne et Vitry-le-François</strong> pour l’évaluation et la compréhension des difficultés cognitives.</p>
+    <p>Mon travail consiste à analyser les liens entre le fonctionnement du cerveau, les capacités cognitives (attention, mémoire, raisonnement, organisation), les émotions et leurs répercussions dans la vie quotidienne.</p>
+    <h3>Une approche clinique rigoureuse</h3>
+    <ul>
+      <li>Tests standardisés validés scientifiquement</li>
+      <li>Analyse précise du profil cognitif</li>
+      <li>Prise en compte du contexte personnel et environnemental</li>
+    </ul>
+    <h3>Objectifs des consultations</h3>
+    <ul>
+      <li>Comprendre l’origine des difficultés</li>
+      <li>Identifier les ressources et fragilités</li>
+      <li>Mettre en place des stratégies adaptées</li>
+      <li>Orienter vers les professionnels si nécessaire</li>
+    </ul>
+    <div class="highlight">
+      <p>Le bilan neuropsychologique constitue une étape clé pour comprendre le fonctionnement global et orienter les démarches de prise en charge.</p>
+    </div>
+  </div>
 </section>
 
 <!-- NEUROPSY -->
 <section id="neuropsy">
-<div class="container">
-
-<h2>La neuropsychologie</h2>
-
-<p>
-La neuropsychologie est une discipline qui étudie les liens entre le cerveau, les fonctions cognitives et les comportements.
-Elle s’intéresse notamment à l’attention, la mémoire, le langage, le raisonnement et les fonctions exécutives.
-</p>
-
-<p>
-Ces fonctions sont essentielles dans les activités du quotidien : apprendre, s’organiser, se concentrer ou encore gérer ses émotions.
-</p>
-
-<h3>Quand consulter ?</h3>
-
-<ul>
-  <li>Difficultés d’attention ou de concentration</li>
-  <li>Troubles de la mémoire</li>
-  <li>Difficultés scolaires ou professionnelles</li>
-  <li>Lenteur, fatigue cognitive, désorganisation</li>
-  <li>Suspicion de TDAH ou troubles exécutifs</li>
-  <li>Suite à un AVC ou traumatisme crânien</li>
-</ul>
-
-<p>
-Le bilan est indiqué lorsque ces difficultés ont un retentissement significatif sur le quotidien.
-</p>
-
-<h3>Déroulement du bilan neuropsychologique</h3>
-
-<ol>
-  <li><strong>Entretien clinique :</strong> analyse de la demande et du parcours</li>
-  <li><strong>Passation de tests :</strong> évaluation des fonctions cognitives</li>
-  <li><strong>Analyse :</strong> interprétation des résultats</li>
-  <li><strong>Restitution :</strong> explication et recommandations personnalisées</li>
-</ol>
-
-<h3>Après le bilan</h3>
-
-<ul>
-  <li>Stratégies d’adaptation concrètes</li>
-  <li>Conseils pour le quotidien, les études ou le travail</li>
-  <li>Orientation vers d’autres professionnels</li>
-  <li>Suivi neuropsychologique si nécessaire</li>
-</ul>
-
-</div>
+  <div class="container">
+    <h2>La neuropsychologie</h2>
+    <p>La neuropsychologie est une discipline qui étudie les liens entre le cerveau, les fonctions cognitives et les comportements. Elle s’intéresse notamment à l’attention, la mémoire, le langage, le raisonnement et les fonctions exécutives.</p>
+    <p>Ces fonctions sont essentielles dans les activités du quotidien : apprendre, s’organiser, se concentrer ou encore gérer ses émotions.</p>
+    <h3>Quand consulter ?</h3>
+    <ul>
+      <li>Difficultés d’attention ou de concentration</li>
+      <li>Troubles de la mémoire</li>
+      <li>Difficultés scolaires ou professionnelles</li>
+      <li>Lenteur, fatigue cognitive, désorganisation</li>
+      <li>Suspicion de TDAH ou troubles exécutifs</li>
+      <li>Suite à un AVC ou traumatisme crânien</li>
+    </ul>
+    <p>Le bilan est indiqué lorsque ces difficultés ont un retentissement significatif sur le quotidien.</p>
+    <h3>Déroulement du bilan neuropsychologique</h3>
+    <ol>
+      <li><strong>Entretien clinique :</strong> analyse de la demande et du parcours</li>
+      <li><strong>Passation de tests :</strong> évaluation des fonctions cognitives</li>
+      <li><strong>Analyse :</strong> interprétation des résultats</li>
+      <li><strong>Restitution :</strong> explication et recommandations personnalisées</li>
+    </ol>
+    <h3>Après le bilan</h3>
+    <ul>
+      <li>Stratégies d’adaptation concrètes</li>
+      <li>Conseils pour le quotidien, les études ou le travail</li>
+      <li>Orientation vers d’autres professionnels</li>
+      <li>Suivi neuropsychologique si nécessaire</li>
+    </ul>
+  </div>
 </section>
 
 <!-- TARIFS -->
 <section id="tarifs">
-<div class="container">
-
-<h2>Actes proposés et modalités</h2>
-
-<h3>Bilan neuropsychologique</h3>
-
-<p>
-Le bilan comprend plusieurs séances (entretien, évaluation, restitution) et permet d’obtenir une compréhension précise du fonctionnement cognitif.
-</p>
-
-<h3>Suivi neuropsychologique</h3>
-
-<p>
-Le suivi vise à accompagner la mise en place de stratégies adaptées afin d’améliorer le fonctionnement au quotidien.
-</p>
-
-<h3>Tarifs</h3>
-
-<p>
-La consultation est proposée à 60 €, l’heure de bilan à 80 €, avec un devis fourni pour tout bilan complet afin de vous informer clairement des tarifs.
-</p>
-
-<h3>Informations pratiques</h3>
-
-<ul>
-  <li>Consultation sur rendez-vous</li>
-  <li>Paiement à la séance</li>
-  <li>Facture fournie pour mutuelle</li>
-</ul>
-
-<p>
-Les consultations ne sont pas remboursées par l’Assurance Maladie, mais certaines mutuelles proposent une prise en charge partielle.
-</p>
-
-<div class="highlight" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-  <p>
-    Pour prendre rendez-vous, merci de cliquer sur le lien suivant.
-  </p>
-  <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="btn-rdv">
-    Prendre rendez-vous
-  </a>
-</div>
-
-  <section id="contact">
-<div class="highlight" style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:1rem;">
-  <h1>Contact</h1>
-  <p>Adresse : 18 Rue Dom. Pierre Pérignon, 51000 Châlons-en-Champagne</p>
-
-  <!-- Conteneur responsive -->
-  <div style="width:100%; max-width:600px; position:relative; padding-bottom:75%; /* ratio 4:3 */">
-      <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83826.1611855049!2d4.322825!3d48.96172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ebdf8679a49ae9%3A0xdf5cf80e3b6902c6!2sCabinet%20Neuropsychologue%20Cravero!5e0!3m2!1sfr!2sfr!4v1775661170406!5m2!1sfr!2sfr"
-          style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+  <div class="container">
+    <h2>Actes proposés et modalités</h2>
+    <h3>Bilan neuropsychologique</h3>
+    <p>Le bilan comprend plusieurs séances (entretien, évaluation, restitution) et permet d’obtenir une compréhension précise du fonctionnement cognitif.</p>
+    <h3>Suivi neuropsychologique</h3>
+    <p>Le suivi vise à accompagner la mise en place de stratégies adaptées afin d’améliorer le fonctionnement au quotidien.</p>
+    <h3>Tarifs</h3>
+    <p>La consultation est proposée à 60 €, l’heure de bilan à 80 €, avec un devis fourni pour tout bilan complet afin de vous informer clairement des tarifs.</p>
+    <h3>Informations pratiques</h3>
+    <ul>
+      <li>Consultation sur rendez-vous</li>
+      <li>Paiement à la séance</li>
+      <li>Facture fournie pour mutuelle</li>
+    </ul>
+    <p>Les consultations ne sont pas remboursées par l’Assurance Maladie, mais certaines mutuelles proposent une prise en charge partielle.</p>
+    <div class="highlight">
+      <p>Pour prendre rendez-vous, merci de cliquer sur le lien suivant.</p>
+      <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero" target="_blank" rel="noopener noreferrer" class="btn-rdv">Prendre rendez-vous</a>
+    </div>
   </div>
-</div>
-  </section>
+</section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="highlight">
+    <h1>Contact</h1>
+    <p>Adresse : 18 Rue Dom. Pierre Pérignon, 51000 Châlons-en-Champagne</p>
+    <div style="width:100%; max-width:600px; position:relative; padding-bottom:75%;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83826.1611855049!2d4.322825!3d48.96172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ebdf8679a49ae9%3A0xdf5cf80e3b6902c6!2sCabinet%20Neuropsychologue%20Cravero!5e0!3m2!1sfr!2sfr!4v1775661170406!5m2!1sfr!2sfr"
+        style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-<div class="container">
-<p>Cabinet de Neuropsychologie – France</p>
-<p>© 2026 – Tous droits réservés</p>
-</div>
+  <div class="container">
+    <p>Cabinet de Neuropsychologie – France</p>
+    <p>© 2026 – Tous droits réservés</p>
+  </div>
 </footer>
+
+<script>
+// Toggle menu mobile
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.querySelector('nav ul');
+toggle.addEventListener('click', () => { menu.classList.toggle('show'); });
+
+// Fermer le menu quand un lien est cliqué (mobile)
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', () => { menu.classList.remove('show'); });
+});
+</script>
 
 </body>
 </html>
