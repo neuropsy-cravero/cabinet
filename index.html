@@ -1,468 +1,325 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cabinet de Neuropsychologie & Psychothérapie TCC</title>  <style>
-    :root {
-      --primary: #2f5d62;
-      --secondary: #5e8b7e;
-      --accent: #cfe7e5;
-      --light: #f7f9f8;
-      --dark: #243333;
-      --focus: #1d7a85;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    }
+<title>Neuropsychologue Reims, Châlons-en-Champagne, Vitry | Bilan neuropsychologique</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<meta name="description"
+content="Neuropsychologue proche Reims, Châlons-en-Champagne et Vitry. Bilan neuropsychologique, troubles attentionnels, mémoire, apprentissages. Adolescents et adultes." />
 
-    body {
-      line-height: 1.75;
-      color: var(--dark);
-      background: var(--light);
-      width:790px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* =========================
-       ACCESSIBILITÉ
-    ========================= */
-    a:focus-visible {
-      outline: 3px solid var(--focus);
-      outline-offset: 3px;
-      border-radius: 4px;
-    }
-
-    /* =========================
-       HEADER STICKY
-    ========================= */
-    .top-fixed {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: white;
-    }
-
-    /* =========================
-       BANNIÈRE
-    ========================= */
-    .banner {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: 0 0 14px 14px;
-      overflow: hidden;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* =========================
-       MENU
-    ========================= */
-    header {
-      border-bottom: 1px solid #e0e0e0;
-      background: white;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 1.1rem 1.4rem;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.6rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 500;
-      font-size: 0.95rem;
-      padding: 0.3rem 0;
-    }
-
-    nav a.active {
-      color: var(--primary);
-      border-bottom: 2px solid var(--primary);
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-    section {
-      padding: 3.2rem 0;
-/*      scroll-margin-top: 350px;  CORRECTION PRINCIPALE */
-      scroll-margin-top: 22rem; /* CORRECTION PRINCIPALE */
-    }
-
-    @media (max-width: 768px) {
-      section {
-        scroll-margin-top: 220px;
-      }
-    }
-
-    section:nth-of-type(even) {
-      background: white;
-    }
-
-    h1, h2, h3 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.45rem; }
-    h3 {
-      font-size: 1.05rem;
-      margin-top: 1.4rem;
-    }
-
-    p {
-      max-width: 900px;
-      margin-bottom: 1rem;
-      font-size: 0.98rem;
-    }
-
-    .highlight {
-      background: var(--accent);
-      padding: 1.2rem 1.4rem;
-      border-left: 4px solid var(--secondary);
-      border-radius: 6px;
-      margin: 1.6rem 0;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-    .hero {
-      padding: 2.0rem 0 2.0rem 0;
-      text-align: center;
-    }
-
-    .hero p {
-      margin: auto;
-      font-size: 1.02rem;
-      max-width: 850px;
-    }
-
-    .hero h1 {
-      margin-bottom: -0.5rem;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-    .contact-box {
-      background: var(--accent);
-      padding: 1.6rem 1.8rem;
-      border-radius: 8px;
-      max-width: 700px;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-    footer {
-      background: #1f2f2f;
-      color: #d6dede;
-      padding: 3rem 1rem;
-    }
-
-    footer h3 { color: #ffffff; }
-    footer p { font-size: 0.88rem; }
-
-/* =========================
-   MENU RESPONSIVE
-========================= */
-
-.main-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+<style>
+:root {
+  --primary:#2f5d62;
+  --secondary:#5e8b7e;
+  --accent:#cfe7e5;
+  --light:#f7f9f8;
+  --dark:#243333;
 }
 
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.6rem;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
 }
 
-.burger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
+body{
+  max-width:780px;
+  margin:auto;
+  line-height:1.65;
+  color:var(--dark);
+  background:var(--light);
 }
 
-.burger span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  margin: 5px 0;
-  background: var(--dark);
-  transition: 0.3s ease;
+.container{
+  padding:1.3rem 1.2rem;
 }
 
-/* ---------- TABLETTE & MOBILE ---------- */
-@media (max-width: 700px) {
-
-  .main-nav {
-    justify-content: flex-end;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .main-nav ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    background: white;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    border-bottom: 1px solid #e0e0e0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-  }
-
-  .main-nav ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .main-nav ul a {
-    display: block;
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  .main-nav.open ul {
-    max-height: 500px;
-  }
-
-  /* Animation burger */
-  .main-nav.open .burger span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .main-nav.open .burger span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .main-nav.open .burger span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
+section{
+  padding:2rem 0; /* légèrement réduit */
 }
-  </style></head>
+
+h1,h2,h3{
+  color:var(--primary);
+  margin-bottom:0.6rem;
+}
+
+h1{font-size:1.7rem;}
+h2{font-size:1.35rem;}
+h3{font-size:1.05rem;margin-top:1.1rem;}
+
+p{
+  margin-bottom:0.7rem;
+  font-size:0.97rem;
+}
+
+ul,ol{
+  margin-left:1.4rem;
+  margin-bottom:0.7rem;
+}
+
+li{
+  margin-bottom:0.3rem;
+}
+
+.hero{
+  text-align:center;
+  padding:1.6rem 0 1.2rem;
+}
+
+.highlight{
+  background:var(--accent);
+  padding:1rem;
+  border-left:4px solid var(--secondary);
+  border-radius:6px;
+  margin-top:1rem;
+}
+
+nav ul{
+  display:flex;
+  justify-content:center;
+  gap:1.4rem;
+  list-style:none;
+  padding:0.8rem 0;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--dark);
+  font-size:0.95rem;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+footer{
+  background:#1f2f2f;
+  color:#d6dede;
+  padding:2rem 1rem;
+  font-size:0.85rem;
+  text-align:center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+}
+
+section[id] {
+  scroll-margin-top: 180px; /* hauteur du menu sticky */
+}
+
+.highlight .btn-rdv {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.highlight .btn-rdv:hover,
+.highlight .btn-rdv:focus {
+  background-color: var(--secondary);
+  outline: none;
+}
+
+</style>
+</head>
 
 <body>
 
-<div class="top-fixed">
+<header>
   <div class="banner">
-    <img src="Banner_v05.png" alt="Cabinet de neuropsychologie">
+    <img src="Banner_v05.png" alt="Cabinet de neuropsychologie à proximité de Reims, Châlons et Vitry">
   </div>
 
-  <header>
-    <div class="container">
-      <nav class="main-nav" aria-label="Navigation principale">
-        <button class="burger"
-                aria-label="Ouvrir le menu"
-                aria-expanded="false"
-                aria-controls="menu-list">
-          <span></span><span></span><span></span>
-        </button>
+  <nav aria-label="Navigation principale" style="background:#006EBF;">
+    <ul>
+      <li><a href="#presentation" style="color:white;"><b>Votre psychologue</b></a></li>
+      <li><a href="#neuropsy" style="color:white;"><b>Neuropsychologie</b></a></li>
+      <li><a href="#tarifs" style="color:white;"><b>Actes & tarifs</b></a></li>
+    </ul>
+  </nav>
+</header>
 
-        <ul id="menu-list">
-          <li><a href="#presentation">Votre thérapeute</a></li>
-          <li><a href="#neuropsy">Neuropsychologie</a></li>
-          <li><a href="#tarifs">Actes & tarifs</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<main>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+
+<h1>Psychologue spécialisé en neuropsychologie</h1>
+<h2>À proximité de Reims, Châlons-en-Champagne et Vitry-le-François</h2>
+
+<p  style="text-align:justify;">
+Le cabinet propose des bilans neuropsychologiques et un accompagnement des difficultés cognitives chez l’adolescent (à partir de 12 ans) et l’adulte.
+</p>
+
+<p  style="text-align:justify;">
+L’objectif est de comprendre le fonctionnement cognitif, d’identifier les difficultés et de proposer des solutions concrètes adaptées au quotidien.
+</p>
+
+</div>
+</section>
+
+<!-- PRESENTATION -->
+<section id="presentation">
+<div class="container">
+
+<h2>Votre neuropsychologue</h2>
+
+<p>
+Je suis <strong>Julien Cravero</strong>, neuropsychologue diplômé de l’Université de Reims (Master psychologie clinique, psychopathologie et neuropsychologie de l’adulte).
+</p>
+
+<p>
+J’accompagne des patients venant de <strong>Reims, Châlons-en-Champagne et Vitry-le-François</strong> pour l’évaluation et la compréhension des difficultés cognitives.
+</p>
+
+<p>
+Mon travail consiste à analyser les liens entre le fonctionnement du cerveau, les capacités cognitives (attention, mémoire, raisonnement, organisation), les émotions et leurs répercussions dans la vie quotidienne.
+</p>
+
+<h3>Une approche clinique rigoureuse</h3>
+
+<ul>
+  <li>Tests standardisés validés scientifiquement</li>
+  <li>Analyse précise du profil cognitif</li>
+  <li>Prise en compte du contexte personnel et environnemental</li>
+</ul>
+
+<h3>Objectifs des consultations</h3>
+
+<ul>
+  <li>Comprendre l’origine des difficultés</li>
+  <li>Identifier les ressources et fragilités</li>
+  <li>Mettre en place des stratégies adaptées</li>
+  <li>Orienter vers les professionnels si nécessaire</li>
+</ul>
+
+<div class="highlight">
+<p>
+Le bilan neuropsychologique constitue une étape clé pour comprendre le fonctionnement global et orienter les démarches de prise en charge.
+</p>
 </div>
 
-<section class="hero">
-  <div class="container">
-    <h1>Comprendre, accompagner et soutenir durablement</h1>
-    <p>Cabinet de neuropsychologie.</p>
-  </div>
+</div>
 </section>
 
-<section id="presentation">
-  <div class="container">
-    <h2>Votre thérapeute</h2>
-
-    <p>Je suis <strong>Julien Cravero</strong>, neuropsychologue, diplômé d’un Master 2 de psychologie et titulaire du titre de psychologue obtenu à l’Université de Reims.</p>
-
-    <p>Mon cabinet accueille tous les publics, enfants, adolescents et adultes, pour un accompagnement personnalisé et adapté à chacun.</p>
-
-    <h3>Une approche clinique scientifique et humaniste</h3>
-    <p>Mon approche combine <strong>rigueur scientifique</strong> et <strong>écoute bienveillante</strong> :</p>
-    <ul>
-      <li><strong>Scientifique :</strong> interventions basées sur des outils validés et des bilans standardisés.</li>
-      <li><strong>Humaniste :</strong> respect du rythme, de la singularité et des ressources de chaque personne.</li>
-    </ul>
-
-    <h3>Mes valeurs clés</h3>
-    <ul>
-      <li>Bienveillance</li>
-      <li>Respect de la singularité</li>
-      <li>Transparence et confiance</li>
-      <li>Collaboration</li>
-      <li>Pragmatisme</li>
-    </ul>
-
-    <div class="highlight">
-      <p>« Bienvenue dans mon cabinet. Mon objectif est de vous accompagner avec <strong>écoute, rigueur et respect</strong>, pour mieux comprendre vos forces et vos difficultés, et construire des stratégies concrètes et durables pour votre quotidien. »</p>
-    </div>
-  </div>
-</section>
-
+<!-- NEUROPSY -->
 <section id="neuropsy">
-  <div class="container">
-    <h2>La neuropsychologie</h2>
+<div class="container">
 
-    <p>Le neuropsychologue est un psychologue spécialisé dans l’étude du fonctionnement cognitif, émotionnel et comportemental, en lien avec le fonctionnement du cerveau.</p>
+<h2>La neuropsychologie</h2>
 
-    <h3>Quand consulter ?</h3>
-    <ul>
-      <li>Difficultés d’attention ou de concentration</li>
-      <li>Troubles de la mémoire</li>
-      <li>Difficultés d’apprentissage</li>
-      <li>Troubles du neurodéveloppement</li>
-      <li>Conséquences d’un AVC ou traumatisme crânien</li>
-      <li>Difficultés émotionnelles impactant le fonctionnement</li>
-    </ul>
+<p>
+La neuropsychologie est une discipline qui étudie les liens entre le cerveau, les fonctions cognitives et les comportements.
+Elle s’intéresse notamment à l’attention, la mémoire, le langage, le raisonnement et les fonctions exécutives.
+</p>
 
-    <h3>Le bilan neuropsychologique</h3>
-    <ol>
-      <li><strong>Entretien clinique</strong></li>
-      <li><strong>Tests standardisés</strong></li>
-      <li><strong>Analyse</strong></li>
-      <li><strong>Restitution</strong></li>
-    </ol>
+<p>
+Ces fonctions sont essentielles dans les activités du quotidien : apprendre, s’organiser, se concentrer ou encore gérer ses émotions.
+</p>
 
-    <h3>Accompagnement</h3>
-    <ul>
-      <li>Remédiation cognitive</li>
-      <li>Stratégies de compensation</li>
-      <li>Accompagnement psychoéducatif</li>
-    </ul>
+<h3>Quand consulter ?</h3>
 
-    <h3>Approche</h3>
-    <p>Une pratique fondée sur des outils validés scientifiquement et une relation de confiance, adaptée à chaque personne.</p>
-  </div>
+<ul>
+  <li>Difficultés d’attention ou de concentration</li>
+  <li>Troubles de la mémoire</li>
+  <li>Difficultés scolaires ou professionnelles</li>
+  <li>Lenteur, fatigue cognitive, désorganisation</li>
+  <li>Suspicion de TDAH ou troubles exécutifs</li>
+  <li>Suite à un AVC ou traumatisme crânien</li>
+</ul>
+
+<p>
+Le bilan est indiqué lorsque ces difficultés ont un retentissement significatif sur le quotidien.
+</p>
+
+<h3>Déroulement du bilan neuropsychologique</h3>
+
+<ol>
+  <li><strong>Entretien clinique :</strong> analyse de la demande et du parcours</li>
+  <li><strong>Passation de tests :</strong> évaluation des fonctions cognitives</li>
+  <li><strong>Analyse :</strong> interprétation des résultats</li>
+  <li><strong>Restitution :</strong> explication et recommandations personnalisées</li>
+</ol>
+
+<h3>Après le bilan</h3>
+
+<ul>
+  <li>Stratégies d’adaptation concrètes</li>
+  <li>Conseils pour le quotidien, les études ou le travail</li>
+  <li>Orientation vers d’autres professionnels</li>
+  <li>Suivi neuropsychologique si nécessaire</li>
+</ul>
+
+</div>
 </section>
 
+<!-- TARIFS -->
 <section id="tarifs">
-  <div class="container">
-    <h2>Actes proposés & tarifs</h2>
+<div class="container">
 
-    <h3>Bilan neuropsychologique</h3>
-    <p>Évaluation complète avec tests et restitution détaillée.</p>
+<h2>Actes proposés et modalités</h2>
 
-    <h3>Suivi neuropsychologique</h3>
-    <p>Accompagnement personnalisé et remédiation cognitive.</p>
+<h3>Bilan neuropsychologique</h3>
 
-    <h3>Tarifs et remboursement</h3>
-    <p>Les tarifs sont communiqués lors du premier contact. Certaines mutuelles proposent un remboursement partiel.</p>
+<p>
+Le bilan comprend plusieurs séances (entretien, évaluation, restitution) et permet d’obtenir une compréhension précise du fonctionnement cognitif.
+</p>
 
-    <div class="highlight">
-      <p>Pour toute information ou prise de rendez-vous, merci de me contacter directement.</p>
-    </div>
-  </div>
+<h3>Suivi neuropsychologique</h3>
+
+<p>
+Le suivi vise à accompagner la mise en place de stratégies adaptées afin d’améliorer le fonctionnement au quotidien.
+</p>
+
+<h3>Informations pratiques</h3>
+
+<ul>
+  <li>Consultation sur rendez-vous</li>
+  <li>Paiement à la séance</li>
+  <li>Facture fournie pour mutuelle</li>
+</ul>
+
+<p>
+Les consultations ne sont pas remboursées par l’Assurance Maladie, mais certaines mutuelles proposent une prise en charge partielle.
+</p>
+
+<div class="highlight" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+  <p>
+    Pour prendre rendez-vous, merci de cliquer sur le lien suivant.
+  </p>
+  <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="btn-rdv">
+    Prendre rendez-vous
+  </a>
+</div>
+
+</div>
 </section>
 
-<section id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="container">
-    <h3>Mentions légales</h3>
-    <p>Cabinet de Neuropsychologie – Exercice libéral – France</p>
-    <p>© 2025 – Tous droits réservés</p>
-  </div>
+<div class="container">
+<p>Cabinet de Neuropsychologie – France</p>
+<p>© 2026 – Tous droits réservés</p>
+</div>
 </footer>
 
-
-
-<script>
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('nav a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 320;
-    if (pageYOffset >= sectionTop) current = section.id;
-  });
-
-  navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-  });
-});
-
-const nav = document.querySelector('.main-nav');
-const burger = document.querySelector('.burger');
-const menuLinks = document.querySelectorAll('.main-nav a');
-
-burger.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  burger.setAttribute('aria-expanded', isOpen);
-});
-
-// Ferme le menu après clic
-menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    burger.setAttribute('aria-expanded', false);
-  });
-});
-
-// Ferme avec ESC
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    nav.classList.remove('open');
-    burger.setAttribute('aria-expanded', false);
-  }
-});
-</script>
 </body>
 </html>
