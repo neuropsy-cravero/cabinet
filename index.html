@@ -174,6 +174,10 @@ header {
 nav {
   position:relative;
   background:#006EBF;
+  min-height:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 nav ul {
@@ -183,7 +187,6 @@ nav ul {
   list-style:none;
   padding:0.8rem 0;
   margin:0;
-  transition:max-height 0.3s ease;
 }
 
 nav a {
@@ -191,7 +194,6 @@ nav a {
   color:white;
   font-size:1rem;
   font-weight:600;
-  transition:color 0.3s;
 }
 /*
 nav a:hover,
@@ -266,7 +268,7 @@ section[id] {
 
 @media (max-width:600px) {
   .nav-toggle { display:block; }
-nav ul {
+  nav ul {
     display:none;
     flex-direction:column;
     width:100%;
@@ -280,10 +282,9 @@ nav ul.show {
   display:flex;
     }
   nav a {
-    font-size:1rem;
-    text-align:center;
     display:block;
-    padding:0.5rem 0;
+    text-align:center;
+    padding:0.8rem;
   }
   section[id] { scroll-margin-top:120px; }
   h1 { font-size:clamp(1.4rem,5vw,1.8rem); }
@@ -454,11 +455,16 @@ nav ul.show {
 // Toggle menu mobile
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('nav ul');
-toggle.addEventListener('click', () => { menu.classList.toggle('show'); });
 
-// Fermer le menu quand un lien est cliqué (mobile)
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+// Fermer le menu après clic sur un lien
 document.querySelectorAll('nav ul li a').forEach(link => {
-  link.addEventListener('click', () => { menu.classList.remove('show'); });
+  link.addEventListener('click', () => {
+    menu.classList.remove('show');
+  });
 });
 </script>
   
