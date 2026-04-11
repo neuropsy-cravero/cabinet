@@ -266,10 +266,15 @@ section[id] {
 
 @media (max-width:600px) {
   .nav-toggle { display:block; }
-  nav ul {
-  display:none;
-  flex-direction:column;
-}
+nav ul {
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#006EBF;
+    position:absolute;
+    top:100%;
+    left:0;
+  }
 
 nav ul.show {
   display:flex;
