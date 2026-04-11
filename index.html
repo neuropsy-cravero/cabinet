@@ -267,12 +267,13 @@ section[id] {
 @media (max-width:600px) {
   .nav-toggle { display:block; }
   nav ul {
-    flex-direction:column;
-    max-height:50px;
-    overflow:hidden;
-    padding:0.5rem 0;
-  }
-  nav ul.show { max-height:500px; }
+  display:none;
+  flex-direction:column;
+}
+
+nav ul.show {
+  display:flex;
+    }
   nav a {
     font-size:1rem;
     text-align:center;
