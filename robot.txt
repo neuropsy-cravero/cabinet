@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Empêche l’exploration de fichiers inutiles (optionnel)
+Disallow: /README.md
+Disallow: /.git/
+
+# Sitemap
+Sitemap: https://neuropsy-cravero.github.io/cabinet/sitemap.xml
