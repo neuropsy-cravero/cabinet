@@ -13,80 +13,115 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://neuropsy-cravero.github.io/cabinet/">
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Julien Cravero, psychologue et neuropsychologue",
+  "@type": ["MedicalBusiness", "Psychologist"],
+
+  "@id": "https://neuropsy-cravero.github.io/cabinet/#cabinet",
+
+  "name": "Cabinet Cravero",
   "url": "https://neuropsy-cravero.github.io/cabinet/",
+  "image": "https://neuropsy-cravero.github.io/cabinet/assets/photo-cabinet.jpg",
+
+  "description": "Cabinet de neuropsychologie à Châlons-en-Champagne. Bilan neuropsychologique enfant et adulte, bilan cognitif, diagnostic TDAH, thérapie TCC.",
+
+  "telephone": "+33654451069",
 
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "18 rue Dom. Pérignon",
     "addressLocality": "Châlons-en-Champagne",
+    "postalCode": "51000",
     "addressRegion": "Grand Est",
     "addressCountry": "FR"
   },
 
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.9566,
+    "longitude": 4.3672
+  },
+
   "areaServed": [
-    "Châlons-en-Champagne",
-    "Reims",
-    "Épernay",
-    "Vitry-le-François"
+    {
+      "@type": "AdministrativeArea",
+      "name": "Marne"
+    },
+    {
+      "@type": "City",
+      "name": "Châlons-en-Champagne"
+    },
+    {
+      "@type": "City",
+      "name": "Reims"
+    },
+    {
+      "@type": "City",
+      "name": "Épernay"
+    },
+    {
+      "@type": "City",
+      "name": "Vitry-le-François"
+    }
   ],
 
   "medicalSpecialty": [
-    "Neuropsychology",
     "Neuropsychologie",
-    "Psychology",
     "Psychologie",
-    "Psychologue",
-    "Neuropsychologue",
-    "Cognitive Behavioral Therapy",
-    "Thérapie TCC"
+    "Thérapie cognitivo-comportementale"
   ],
-
-  "description": "Psychologue et neuropsychologue à Châlons-en-Champagne. Thérapie TCC, bilan neuropsychologique enfant et adulte, bilan cognitif, bilan TDAH.",
 
   "makesOffer": [
     {
       "@type": "MedicalProcedure",
-      "name": "Bilan neuropsychologique enfant"
+      "name": "Bilan neuropsychologique enfant",
+      "areaServed": "Châlons-en-Champagne"
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Bilan neuropsychologique adolescent"
+      "name": "Bilan neuropsychologique adulte",
+      "areaServed": "Châlons-en-Champagne"
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Bilan neuropsychologique adulte"
+      "name": "Bilan cognitif",
+      "areaServed": "Châlons-en-Champagne"
     },
     {
       "@type": "MedicalProcedure",
-      "name": "accompagnement"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "soutien psychologique"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Thérapie TCC"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Bilan cognitif"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Bilan TDAH"
+      "name": "Diagnostic TDAH",
+      "areaServed": "Châlons-en-Champagne"
     }
   ],
-"sameAs": [
-  "https://www.pagesjaunes.fr/pros/64871625",
-  "https://www.linkedin.com/in/julien-cravero-80a19013a"
-]
+
+  "hasMap": "https://www.google.com/maps?q=18+rue+Dom+Perignon+51000+Chalons-en-Champagne",
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+
+  "priceRange": "€€",
+
+  "sameAs": [
+    "https://share.google/ZRv7o9dWCqA2Sswyi",
+    "https://www.linkedin.com/in/julien-cravero-80a19013a/",
+    "https://www.pagesjaunes.fr/pros/64871625",
+    "https://perfactive.fr/julien-cravero/new?location=8620294"
+  ]
 }
-  </script>
+</script>
   
   <style>
 
