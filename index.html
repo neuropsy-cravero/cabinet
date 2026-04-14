@@ -127,225 +127,9 @@
   ]
 }
 </script>
-  
-  <style>
 
-:root {
-  --primary:#2f5d62;
-  --secondary:#5e8b7e;
-  --accent:#cfe7e5;
-  --light:#f7f9f8;
-  --dark:#243333;
-}
+<link rel="stylesheet" href="scripts/style.css">
 
-* {
-  margin:0;
-  box-sizing:border-box;
-  font-family:"Segoe UI", Arial, sans-serif;
-}
-
-body {
-  max-width:790px;
-  margin:0 auto;
-  padding:0 1rem;
-  line-height:1.65;
-  color:var(--dark);
-  background:var(--light);
-}
-
-.container {
-  max-width:780px;
-  margin:auto;
-  padding:1rem 1rem;
-}
-
-section {
-  padding:2rem 0;
-}
-
-h1,h2,h3,h4 {
-  color:var(--primary);
-  margin-bottom:0.6rem;
-}
-
-h1 { font-size:clamp(1.5rem,4vw,2rem); }
-h2 { font-size:clamp(1.2rem,3.5vw,1.7rem); }
-h3 { font-size:clamp(1rem,3vw,1.3rem); margin-top:1rem; }
-h4 { font-size:clamp(1rem,2.5vw,1.2rem); margin-top:0.5rem; }
-
-p {
-  margin-bottom:0.7rem;
-  font-size:clamp(0.95rem,2.5vw,1.1rem);
-}
-
-ul,ol {
-  margin-left:1.4rem;
-  margin-bottom:0.7rem;
-}
-
-li {
-  margin-bottom:0.3rem;
-}
-
-/* HERO */
-.hero {
-  text-align:center;
-  padding:1.6rem 0 1.2rem;
-}
-
-/* HIGHLIGHT BLOCK */
-.highlight {
-  background:var(--accent);
-  padding:1rem;
-  border-left:4px solid var(--secondary);
-  border-radius:6px;
-  margin-top:1rem;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  gap:0.5rem;
-}
-
-/* HEADER & NAV */
-header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(5px);
-  box-shadow:0 1px 4px rgba(0,0,0,0.1);
-}
-
-nav {
-  position:relative;
-  background:#006EBF;
-  min-height:50px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-nav ul {
-  display:flex;
-  justify-content:center;
-  gap:1.4rem;
-  list-style:none;
-  padding:0.8rem 0;
-  margin:0;
-}
-
-nav a {
-  text-decoration:none;
-  color:white;
-  font-size:1rem;
-  font-weight:600;
-}
-/*
-nav a:hover,
-nav a:focus-visible {
-  background-color:#fcb05f;
-  color:black;
-  outline:none;
-  padding:0.5rem;
-}
-*/
-/* HAMBURGER */
-.nav-toggle {
-  display:none;
-  position:absolute;
-  right:1rem;
-  top:50%;
-  transform:translateY(-50%);
-  background:none;
-  border:none;
-  font-size:1.8rem;
-  color:white;
-  cursor:pointer;
-}
-
-/* FOOTER */
-footer {
-  background:#1f2f2f;
-  color:#d6dede;
-  padding:2rem 1rem;
-  font-size:0.85rem;
-  text-align:center;
-}
-
-/* SCROLL OFFSET */
-section[id] {
-  scroll-margin-top: 180px;
-}
-
-/* BUTTON RDV */
-.highlight .btn-rdv {
-  display:inline-block;
-  background-color:var(--primary);
-  color:white;
-  padding:0.6rem 1.2rem;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:600;
-  transition: background-color 0.3s ease;
-  width:100%;
-  max-width:250px;
-  text-align:center;
-}
-
-.highlight .btn-rdv:hover,
-.highlight .btn-rdv:focus {
-  background-color:var(--secondary);
-  outline:none;
-}
-
-/* BANNER IMAGE */
-.banner img {
-  width:100%;
-  height:auto;
-  object-fit:cover;
-  display:block;
-}
-
-/* RESPONSIVE */
-@media (max-width:900px) {
-  .container { padding:0.8rem; }
-}
-
-@media (max-width:700px) {
-  .nav-toggle { display:block; }
-  nav ul {
-    display:none;
-    flex-direction:column;
-    width:100%;
-    background:#006EBF;
-    position:absolute;
-    top:100%;
-    left:0;
-  }
-
-nav ul.show {
-  display:flex;
-    }
-  nav a {
-    display:block;
-    text-align:center;
-    padding:0.8rem;
-  }
-  section[id] { scroll-margin-top:120px; }
-  h1 { font-size:clamp(1.4rem,5vw,1.8rem); }
-  h2 { font-size:clamp(1.1rem,4vw,1.5rem); }
-  h3 { font-size:clamp(0.95rem,3.5vw,1.2rem); }
-  h4 { font-size:clamp(0.9rem,3vw,1.1rem); }
-  p { font-size:clamp(0.9rem,2.8vw,1rem); }
-  .highlight .btn-rdv { max-width:100%; }
-}
-
-@media (max-width:400px) {
-  nav a { font-size:0.95rem; }
-}
-
-</style>
 </head>
 
 <body>
@@ -358,8 +142,8 @@ nav ul.show {
   <nav aria-label="Navigation principale">
     <button class="nav-toggle" aria-label="Menu">&#9776;</button>
     <ul>
-      <li><a href="#presentation">Votre neuropsychologue</a></li>
-      <li><a href="#neuropsy">Neuropsychologie</a></li>
+      <li><a href="#presentation">Le neuropsychologue</a></li>
+      <li><a href="#neuropsy">La neuropsychologie</a></li>
       <li><a href="#tarifs">Actes & tarifs</a></li>
       <li><a href="#rdv">Prendre rendez-vous</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -385,6 +169,7 @@ Situé à Châlons-en-Champagne, le cabinet reçoit également des patients vena
     <p style="text-align:left;">
       Les bilans neuropsychologiques ont pour objectifs d'évaluer les difficultés cognitives et de proposer des accompagnements adaptés pour l’adolescent (à partir de 12 ans) et l’adulte.
     </p>
+
     <h2 style="background:#FE8807;color:white;">Comprendre, accompagner et soutenir durablement</h2>
   </div>
 </section>
@@ -455,6 +240,13 @@ Situé à Châlons-en-Champagne, le cabinet reçoit également des patients vena
 
     <h3>Bilan neuropsychologique</h3>
     <p>Le bilan comprend plusieurs séances (entretien, évaluation, restitution) et permet d’obtenir une compréhension précise du fonctionnement cognitif.</p>
+    <h4>Les bilans proposés :</h4>
+    <ul>
+      <li><a href="pages/bilan-neuropsy-adolescent.html" class="btn-rdv">Bilan neuropsychologique adolescent</a></li>
+      <li><a href="pages/bilan-neuropsy-adulte.html" class="btn-rdv">Bilan neuropsychologique adulte</a></li>
+      <li><a href="pages/bilan-neuropsy-memoire.html" class="btn-rdv">Bilan mémoire</a></li>
+      <li><a href="pages/bilan-neuropsy-TDAH.html" class="btn-rdv">Bilan TDAH</a></li>
+    </ul>
 
     <h3>Suivi neuropsychologique</h3>
     <p>Le suivi vise à accompagner la mise en place de stratégies adaptées afin d’améliorer le fonctionnement au quotidien.</p>
@@ -502,7 +294,7 @@ Situé à Châlons-en-Champagne, le cabinet reçoit également des patients vena
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83826.1611855049!2d4.322825!3d48.96172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ebdf8679a49ae9%3A0xdf5cf80e3b6902c6!2sCabinet%20Neuropsychologue%20Cravero!5e0!3m2!1sfr!2sfr!4v1775661170406!5m2!1sfr!2sfr"
         style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
- 
+
 
 
     </div>
@@ -514,19 +306,19 @@ Situé à Châlons-en-Champagne, le cabinet reçoit également des patients vena
   </p>
 
   <!-- Bouton PagesJaunes -->
-  <a href="https://www.pagesjaunes.fr/pros/64871625" 
-     target="_blank" 
+  <a href="https://www.pagesjaunes.fr/pros/64871625"
+     target="_blank"
      rel="noopener noreferrer"
      class="btn-rdv"
      style="margin:0.4rem 0;">
      Voir sur PagesJaunes
   </a>
 
-  
+
 
   <!-- Bouton LinkedIn -->
-  <a href="https://www.linkedin.com/in/julien-cravero-80a19013a" 
-     target="_blank" 
+  <a href="https://www.linkedin.com/in/julien-cravero-80a19013a"
+     target="_blank"
      rel="noopener noreferrer"
      class="btn-rdv"
      style="margin:0.4rem 0;">
@@ -546,22 +338,7 @@ Situé à Châlons-en-Champagne, le cabinet reçoit également des patients vena
   </div>
 </footer>
 
-<script>
-// Toggle menu mobile
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector('nav ul');
+<script src="scripts/toggle.js"></script>
 
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('show');
-});
-
-// Fermer le menu après clic sur un lien
-document.querySelectorAll('nav ul li a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('show');
-  });
-});
-</script>
-  
 </body>
 </html>
