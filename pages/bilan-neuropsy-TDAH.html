@@ -1,178 +1,1320 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>TDAH à Châlons-en-Champagne | Diagnostic enfant, adolescent et adulte</title>
+  <title>Bilan TDAH à Châlons-en-Champagne | Julien Cravero</title>
 
-  <meta name="description" content="Bilan TDAH à Châlons-en-Champagne. Diagnostic du trouble de l’attention chez l’enfant, l’adolescent et l’adulte. Tests neuropsychologiques complets et évaluation cognitive.">
+  <meta name="description" content="Évaluation du TDAH chez l'adolescent et l'adulte à Châlons-en-Champagne. Entretiens cliniques, évaluation neuropsychologique et recommandations personnalisées.">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173c42">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neuropsy-cravero.github.io/cabinet/pages/bilan-neuropsy-TDAH.html">
+  <link rel="icon" href="../images/Psychologue_Cravero_favicon.ico">
 
-  <link rel="stylesheet" href="../scripts/style.css">
+  <style>
+    :root {
+      --primary: #173c42;
+      --primary-light: #285b60;
+      --accent: #8fc7bd;
+      --accent-light: #e8f3f0;
+      --background: #f6f8f7;
+      --surface: #ffffff;
+      --text: #253537;
+      --muted: #617174;
+      --border: #dce6e3;
+      --shadow: 0 12px 35px rgba(23, 60, 66, 0.08);
+      --radius: 18px;
+      --content: 1120px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--primary-light);
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #e4a84b;
+      outline-offset: 4px;
+    }
+
+    p {
+      margin: 0 0 1.15rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--primary);
+      font-weight: 750;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 0 1.4rem;
+      font-size: clamp(2.15rem, 5vw, 3.7rem);
+    }
+
+    h2 {
+      margin: 0 0 1.3rem;
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+    }
+
+    h3 {
+      margin: 0 0 0.7rem;
+      font-size: 1.18rem;
+    }
+
+    ul {
+      margin: 0 0 1.3rem;
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.55rem;
+      padding-left: 0.15rem;
+    }
+
+    .container {
+      width: min(var(--content), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 2000;
+      padding: 12px 18px;
+      color: white;
+      background: var(--primary);
+      border-radius: 8px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      width: min(1280px, calc(100% - 40px));
+      min-height: 76px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      border-radius: 14px;
+      background: var(--accent-light);
+      color: var(--primary);
+      font-size: 1.35rem;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.77rem;
+      font-weight: 500;
+    }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+      color: var(--primary);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .main-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .main-nav li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.93rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .main-nav a:hover {
+      color: var(--primary-light);
+    }
+
+    .main-nav .nav-cta {
+      padding: 10px 16px;
+      color: white;
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    .main-nav .nav-cta:hover {
+      background: var(--primary-light);
+      color: white;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 80px;
+      background:
+        radial-gradient(ellipse at 95% 10%, rgba(143, 199, 189, 0.3), transparent 35%),
+        linear-gradient(135deg, #edf5f2 0%, #f8faf9 65%, #eaf3f0 100%);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -200px;
+      width: 430px;
+      height: 430px;
+      content: "";
+      border: 1px solid rgba(40, 91, 96, 0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: var(--primary-light);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 26px;
+      height: 3px;
+      content: "";
+      background: var(--accent);
+      border-radius: 99px;
+    }
+
+    .hero-intro {
+      max-width: 760px;
+      color: #4e6264;
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 21px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      font: inherit;
+      font-weight: 750;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+    }
+
+    .btn-primary:hover {
+      color: white;
+      background: var(--primary-light);
+    }
+
+    .btn-secondary {
+      color: var(--primary);
+      background: white;
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-light);
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* General sections */
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .section-white {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--primary-light);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .text-column {
+      max-width: 850px;
+    }
+
+    .text-column p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Cards */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 27px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 5px 18px rgba(23, 60, 66, 0.035);
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      background: var(--accent-light);
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .check-list {
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      margin-bottom: 12px;
+      padding-left: 31px;
+    }
+
+    .check-list li::before {
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      display: grid;
+      place-items: center;
+      width: 21px;
+      height: 21px;
+      content: "✓";
+      color: var(--primary);
+      background: var(--accent-light);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    /* Assessment process */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      counter-reset: assessment;
+    }
+
+    .step {
+      position: relative;
+      min-height: 150px;
+      padding: 25px 25px 25px 78px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      counter-increment: assessment;
+    }
+
+    .step::before {
+      position: absolute;
+      top: 25px;
+      left: 23px;
+      display: grid;
+      place-items: center;
+      width: 39px;
+      height: 39px;
+      content: counter(assessment, decimal-leading-zero);
+      color: var(--primary);
+      background: var(--accent-light);
+      border-radius: 12px;
+      font-weight: 850;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Call to action */
+
+    .cta-section {
+      padding: 64px 0;
+      background: var(--primary);
+      color: white;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta-inner h2 {
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .cta-inner p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: #d7e6e3;
+    }
+
+    .cta-section .btn {
+      flex-shrink: 0;
+      color: var(--primary);
+      background: white;
+    }
+
+    .cta-section .btn:hover {
+      background: var(--accent-light);
+    }
+
+    /* Quote / modalities */
+
+    .quote-panel {
+      max-width: 900px;
+      padding: 30px;
+      background: var(--accent-light);
+      border: 1px solid #d1e7e1;
+      border-radius: var(--radius);
+    }
+
+    .quote-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Location */
+
+    .location-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .location-details {
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .location-details p {
+      color: var(--muted);
+    }
+
+    .map-frame {
+      min-height: 320px;
+      overflow: hidden;
+      background: #e8efed;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 900px;
+    }
+
+    .faq-item {
+      margin-bottom: 13px;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 20px 52px 20px 22px;
+      color: var(--primary);
+      font-weight: 750;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      content: "+";
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 22px 20px;
+      color: var(--muted);
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 30px 0;
+      background: #102e33;
+      color: #d7e6e3;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .site-footer p {
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+    .site-footer a {
+      color: white;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 12px 20px 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .main-nav.is-open {
+        display: block;
+      }
+
+      .main-nav ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        width: min(var(--content), 100%);
+        margin: auto;
+      }
+
+      .main-nav a {
+        display: block;
+        padding: 13px 8px;
+      }
+
+      .main-nav .nav-cta {
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 32px, var(--content));
+      }
+
+      .header-inner {
+        width: calc(100% - 32px);
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 0.94rem;
+      }
+
+      .brand small {
+        font-size: 0.72rem;
+      }
+
+      .hero {
+        padding: 62px 0 58px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .card-grid,
+      .steps,
+      .location-box {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 23px;
+      }
+
+      .step {
+        padding-left: 72px;
+      }
+
+      .quote-panel,
+      .location-details {
+        padding: 23px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 270px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": "https://neuropsy-cravero.github.io/cabinet/#cabinet",
+    "name": "Cabinet Cravero - Psychologie et neuropsychologie",
+    "url": "https://neuropsy-cravero.github.io/cabinet/pages/bilan-neuropsy-TDAH.html",
+    "description": "Évaluation neuropsychologique et évaluation clinique du TDAH chez l'adolescent et l'adulte à Châlons-en-Champagne.",
+    "telephone": "+33654451069",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "18 rue Dom. Pérignon",
+      "addressLocality": "Châlons-en-Champagne",
+      "postalCode": "51000",
+      "addressRegion": "Grand Est",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      "Châlons-en-Champagne",
+      "Reims",
+      "Épernay",
+      "Vitry-le-François"
+    ],
+    "medicalSpecialty": "Psychology",
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Évaluation clinique et neuropsychologique du TDAH"
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Cabinet+Neuropsychologue+Cravero+Chalons-en-Champagne"
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
 
-<header>
-  <div class="banner">
-    <img src="../Banner_v05.png" alt="Psychologue Châlons-en-Champagne – bilan TDAH attention">
-  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Cabinet Cravero, accueil">
+        <span class="brand-mark" aria-hidden="true">🧠</span>
+        <span>
+          Cabinet Cravero
+          <small>Psychologie · Neuropsychologie</small>
+        </span>
+      </a>
 
-  <nav aria-label="Navigation principale">
-    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
-    <ul>
-      <li><a href="../index.html#tarifs">Retour à l'accueil</a></li>
-    </ul>
-  </nav>
-</header>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="navigation-principale">
+        ☰
+      </button>
 
-<!-- SECTION 1 : INTRO -->
-<section>
-  <h1>TDAH à Châlons-en-Champagne : diagnostic et bilan neuropsychologique</h1>
-
-  <p>
-    Le TDAH (trouble du déficit de l’attention avec ou sans hyperactivité) est un trouble neurodéveloppemental
-    qui peut concerner l’enfant, l’adolescent et l’adulte.
-  </p>
-
-  <p>
-    Le cabinet de psychologie et neuropsychologie réalise des bilans complets à Châlons-en-Champagne,
-    ainsi que pour les patients venant de Reims, Épernay et Vitry-le-François.
-  </p>
-</section>
-
-<!-- SECTION 2 : CTA -->
-<section>
-  <div class="container">
-    <div class="highlight">
-      <p>Pour prendre rendez-vous, merci de cliquer sur le lien suivant.</p>
-      <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-rdv">Prendre rendez-vous</a>
+      <nav class="main-nav" id="navigation-principale" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="#comprendre">Comprendre le TDAH</a></li>
+          <li><a href="#bilan">Le bilan</a></li>
+          <li><a href="#modalites">Modalités</a></li>
+          <li>
+            <a class="nav-cta"
+               href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+               target="_blank"
+               rel="noopener noreferrer">Prendre rendez-vous</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- SECTION 3 : COMPRENDRE LE TDAH -->
-<section>
-  <h2>🧠 Qu’est-ce que le TDAH ?</h2>
+  <main id="contenu">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Psychologie · Neuropsychologie</span>
 
-  <p>
-    Le TDAH est un trouble neurodéveloppemental qui affecte principalement l’attention,
-    l’impulsivité et parfois l’hyperactivité.
-  </p>
+          <h1>Évaluation du TDAH à Châlons-en-Champagne</h1>
 
-  <p>
-    Il peut avoir des conséquences importantes sur la scolarité, le travail et la vie quotidienne.
-  </p>
+          <p class="hero-intro">
+            Le trouble du déficit de l’attention avec ou sans hyperactivité (TDAH)
+            peut avoir des répercussions sur les apprentissages, l’organisation,
+            les relations et la vie professionnelle. Une évaluation permet de mieux
+            comprendre les difficultés et d’identifier les accompagnements adaptés.
+          </p>
 
-  <ul>
-    <li>Difficulté à maintenir l’attention</li>
-    <li>Impulsivité</li>
-    <li>Hyperactivité mentale ou motrice</li>
-    <li>Désorganisation</li>
-    <li>Oublis fréquents</li>
-  </ul>
-</section>
+          <p class="hero-intro">
+            Le cabinet est situé à Châlons-en-Champagne et accueille les patients
+            concernés par une démarche d’évaluation neuropsychologique, notamment
+            les adolescents à partir de 12 ans et les adultes.
+          </p>
 
-<!-- SECTION 4 : ENFANT -->
-<section>
-  <h2>👶 TDAH chez l’enfant</h2>
+          <div class="hero-actions">
+            <a class="btn btn-primary"
+               href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+               target="_blank"
+               rel="noopener noreferrer">Prendre rendez-vous ↗</a>
 
-  <p>
-    Chez l’enfant, le TDAH se manifeste souvent par une agitation importante,
-    des difficultés à rester concentré et des troubles du comportement en classe.
-  </p>
-</section>
+            <a class="btn btn-secondary" href="#bilan">
+              Découvrir le déroulement du bilan
+            </a>
+          </div>
 
-<!-- SECTION 5 : ADOLESCENT -->
-<section>
-  <h2>🧑‍🎓 TDAH chez l’adolescent</h2>
+          <p class="hero-note">
+            Cabinet à Châlons-en-Champagne · Accès sur rendez-vous
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <p>
-    Chez l’adolescent, le TDAH entraîne souvent une baisse des performances scolaires,
-    un manque de motivation et des difficultés d’organisation et de gestion du temps.
-  </p>
-</section>
+    <!-- COMPRENDRE LE TDAH -->
+    <section class="section section-white" id="comprendre">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Mieux comprendre</span>
+          <h2>Qu’est-ce que le TDAH ?</h2>
+          <p>
+            Le TDAH est un trouble neurodéveloppemental caractérisé par des symptômes
+            d’inattention et/ou d’hyperactivité-impulsivité. Leur expression varie
+            selon les personnes, les contextes et les périodes de vie.
+          </p>
+        </div>
 
-<!-- SECTION 6 : ADULTE -->
-<section>
-  <h2>👨 TDAH chez l’adulte</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎯</div>
+            <h3>Attention</h3>
+            <p>
+              Difficulté à maintenir son attention, à filtrer les distractions,
+              à écouter jusqu’au bout ou à terminer certaines tâches.
+            </p>
+          </article>
 
-  <p>
-    Chez l’adulte, il peut se traduire par une fatigue mentale, des difficultés de concentration,
-    une désorganisation et des problèmes dans la gestion des tâches quotidiennes ou professionnelles.
-  </p>
-</section>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⚡</div>
+            <h3>Impulsivité et agitation</h3>
+            <p>
+              Tendance à agir rapidement, à interrompre, à avoir du mal à attendre
+              ou à ressentir une agitation parfois surtout intérieure.
+            </p>
+          </article>
 
-<!-- SECTION 7 : BILAN -->
-<section>
-  <h2>📋 Comment se déroule un bilan TDAH ?</h2>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🗂️</div>
+            <h3>Organisation</h3>
+            <p>
+              Difficultés à planifier, à gérer le temps, à hiérarchiser les priorités,
+              à anticiper ou à se souvenir des tâches à réaliser.
+            </p>
+          </article>
+        </div>
 
-  <ul>
-    <li>Entretien clinique approfondi</li>
-    <li>Analyse de l’histoire développementale</li>
-    <li>Tests neuropsychologiques de l’attention et des fonctions exécutives</li>
-    <li>Évaluation des troubles associés (anxiété, apprentissages, etc.)</li>
-    <li>Restitution complète avec recommandations personnalisées</li>
-  </ul>
-</section>
+        <div class="text-column" style="margin-top:30px">
+          <p>
+            Ces manifestations ne suffisent pas, à elles seules, à conclure à un TDAH.
+            Des difficultés d’attention ou d’organisation peuvent également être
+            associées au sommeil, au stress, à l’anxiété, à l’humeur, à des troubles
+            des apprentissages ou à d’autres facteurs.
+          </p>
+          <p>
+            L’évaluation vise donc à replacer les difficultés dans leur histoire
+            développementale et leur contexte actuel, plutôt qu’à se limiter à une
+            liste de symptômes.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- SECTION 8 : UTILITÉ -->
-<section>
-  <h2>🎯 Pourquoi réaliser un bilan TDAH ?</h2>
+    <!-- PROFILS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Selon la période de vie</span>
+          <h2>Le TDAH peut se manifester différemment</h2>
+          <p>
+            Les signes observés et leurs conséquences dépendent notamment de l’âge,
+            des exigences du quotidien et des stratégies mises en place.
+          </p>
+        </div>
 
-  <p>
-    Le bilan permet de poser un diagnostic précis et de mieux comprendre les difficultés rencontrées.
-    Il permet également de proposer des stratégies concrètes d’adaptation :
-  </p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧒</div>
+            <h3>Chez l’enfant</h3>
+            <p>
+              Le TDAH peut se traduire par des difficultés à rester attentif,
+              à suivre les consignes, à attendre son tour ou à s’organiser dans
+              les activités scolaires et quotidiennes.
+            </p>
+          </article>
 
-  <ul>
-    <li>Aménagements scolaires ou professionnels</li>
-    <li>Stratégies d’organisation</li>
-    <li>Accompagnement thérapeutique adapté</li>
-  </ul>
-</section>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎒</div>
+            <h3>Chez l’adolescent</h3>
+            <p>
+              Les difficultés peuvent concerner le travail personnel, la gestion
+              des échéances, l’autonomie, l’attention en classe et la régulation
+              de l’impulsivité. L’agitation peut être moins visible.
+            </p>
+          </article>
 
-<!-- SECTION 9 : LOCALISATION -->
-<section>
-  <h2>📍 Cabinet à Châlons-en-Champagne</h2>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧑‍💻</div>
+            <h3>Chez l’adulte</h3>
+            <p>
+              Le TDAH peut se manifester par une désorganisation persistante,
+              des oublis, une procrastination, une difficulté à prioriser ou
+              une mobilisation importante pour accomplir les tâches courantes.
+            </p>
+          </article>
+        </div>
 
-  <p>
-    Le cabinet est situé au 18 rue Dom. Pérignon, 51000 Châlons-en-Champagne.
-    Il est accessible depuis Reims, Épernay et Vitry-le-François.
-  </p>
-</section>
+        <p style="margin-top:25px; color:var(--muted)">
+          Le cabinet accueille les adolescents à partir de 12 ans et les adultes.
+          Pour un enfant plus jeune, une orientation vers un professionnel ou une
+          structure adaptée à son âge peut être discutée.
+        </p>
+      </div>
+    </section>
 
-<!-- SECTION 10 : CTA -->
-<section>
-  <div class="container">
-    <div class="highlight">
-      <p>Pour prendre rendez-vous, merci de cliquer sur le lien suivant.</p>
-      <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-rdv">Prendre rendez-vous</a>
+    <!-- BILAN -->
+    <section class="section section-white" id="bilan">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">La démarche d’évaluation</span>
+          <h2>Comment se déroule une évaluation du TDAH ?</h2>
+          <p>
+            La démarche est individualisée. Le choix des entretiens, questionnaires
+            et tests dépend de la situation, de l’histoire de la personne et de la
+            question clinique posée.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <h3>Entretien clinique</h3>
+            <p>
+              Recueil de la demande, des difficultés actuelles, du parcours scolaire
+              ou professionnel, du contexte de vie et des antécédents pertinents.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Histoire développementale</h3>
+            <p>
+              Exploration de l’apparition et de l’évolution des difficultés au cours
+              de la vie, ainsi que de leurs répercussions dans différents contextes.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Outils d’évaluation</h3>
+            <p>
+              Selon les indications, utilisation d’entretiens structurés, de
+              questionnaires et de tests neuropsychologiques ciblant notamment
+              l’attention et les fonctions exécutives.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Analyse et restitution</h3>
+            <p>
+              Mise en perspective des informations recueillies, discussion des
+              hypothèses cliniques, restitution des résultats et recommandations
+              personnalisées.
+            </p>
+          </article>
+        </div>
+
+        <div class="text-column" style="margin-top:30px">
+          <p>
+            Des outils comme la DIVA-5 ou des questionnaires standardisés peuvent
+            être utilisés lorsqu’ils sont adaptés à la situation. Aucun questionnaire
+            ni test isolé ne suffit à établir un diagnostic à lui seul.
+          </p>
+          <p>
+            L’évaluation tient également compte des difficultés susceptibles de
+            ressembler à celles du TDAH ou de coexister avec lui, par exemple les
+            troubles du sommeil, l’anxiété, les troubles de l’humeur ou les difficultés
+            d’apprentissage. Si nécessaire, une orientation médicale complémentaire
+            peut être proposée.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIFS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Après l’évaluation</span>
+          <h2>À quoi sert le bilan ?</h2>
+          <p>
+            L’objectif est de mieux comprendre le fonctionnement cognitif et les
+            difficultés rencontrées, puis de dégager des pistes concrètes pour
+            faciliter le quotidien.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🔎</div>
+            <h3>Comprendre son fonctionnement</h3>
+            <p>
+              Identifier les difficultés, les points d’appui et les facteurs
+              contextuels susceptibles d’influencer l’attention et l’organisation.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧭</div>
+            <h3>Adapter le quotidien</h3>
+            <p>
+              Réfléchir à des stratégies de planification, de gestion du temps,
+              de mémorisation des tâches et d’aménagement de l’environnement.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🤝</div>
+            <h3>Orienter l’accompagnement</h3>
+            <p>
+              Envisager, selon les besoins, des adaptations scolaires ou
+              professionnelles, un accompagnement psychologique ou une consultation
+              médicale complémentaire.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALITES -->
+    <section class="section section-white" id="modalites">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Informations pratiques</span>
+          <h2>Modalités de l’évaluation</h2>
+        </div>
+
+        <div class="quote-panel">
+          <h3>Une démarche adaptée à chaque situation</h3>
+          <p>
+            Les besoins d’évaluation varient selon l’âge, la demande, l’histoire
+            clinique et les investigations nécessaires. Les modalités sont donc
+            précisées individuellement.
+          </p>
+          <p>
+            <strong>La prestation est proposée uniquement sur devis personnalisé,</strong>
+            établi après un premier échange permettant de préciser la demande et
+            le cadre de l’évaluation.
+          </p>
+          <p>
+            Le rendez-vous se prend en ligne. La démarche et les étapes envisagées
+            sont précisées lors des premiers échanges.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <div>
+          <h2>Vous souhaitez discuter d’une évaluation ?</h2>
+          <p>
+            Prenez rendez-vous pour présenter votre demande et déterminer si une
+            évaluation neuropsychologique est pertinente dans votre situation.
+          </p>
+        </div>
+
+        <a class="btn"
+           href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+           target="_blank"
+           rel="noopener noreferrer">Prendre rendez-vous ↗</a>
+      </div>
+    </section>
+
+    <!-- LOCALISATION -->
+    <section class="section" id="localisation">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Accès au cabinet</span>
+          <h2>Psychologue à Châlons-en-Champagne</h2>
+          <p>
+            Le cabinet est situé à Châlons-en-Champagne, dans la Marne. Il peut
+            accueillir des personnes venant notamment de Châlons-en-Champagne,
+            Reims, Épernay et Vitry-le-François.
+          </p>
+        </div>
+
+        <div class="location-box">
+          <div class="location-details">
+            <h3>Cabinet Cravero</h3>
+            <p>
+              <strong>Adresse</strong><br>
+              18 rue Dom. Pérignon<br>
+              51000 Châlons-en-Champagne
+            </p>
+
+            <p>
+              <strong>Consultations</strong><br>
+              Sur rendez-vous.
+            </p>
+
+            <a class="btn btn-primary"
+               href="https://www.google.com/maps/search/?api=1&query=18+rue+Dom+P%C3%A9rignon+51000+Ch%C3%A2lons-en-Champagne"
+               target="_blank"
+               rel="noopener noreferrer">Itinéraire ↗</a>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="Localisation du cabinet de neuropsychologie à Châlons-en-Champagne"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83826.1611855049!2d4.322825!3d48.96172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ebdf8679a49ae9%3A0xdf5cf80e3b6902c6!2sCabinet%20Neuropsychologue%20Cravero!5e0!3m2!1sfr!2sfr!4v1775661170406!5m2!1sfr!2sfr"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-white" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Questions fréquentes</span>
+          <h2>Questions sur l’évaluation du TDAH</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Le TDAH peut-il être identifié à l’âge adulte ?</summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Une évaluation à l’âge adulte explore les difficultés actuelles,
+                leur retentissement et les signes présents au cours du développement.
+                L’analyse doit tenir compte des autres explications possibles.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Combien de temps dure le bilan ?</summary>
+            <div class="faq-answer">
+              <p>
+                La durée dépend de la demande et des investigations nécessaires.
+                Le nombre de rendez-vous et les étapes envisagées sont précisés
+                après l’analyse initiale de la situation.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Faut-il une ordonnance pour prendre rendez-vous ?</summary>
+            <div class="faq-answer">
+              <p>
+                La prise de contact avec le cabinet est possible directement.
+                Selon la situation clinique et les questions soulevées, une démarche
+                complémentaire auprès d’un médecin peut être indiquée.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Un test suffit-il à diagnostiquer un TDAH ?</summary>
+            <div class="faq-answer">
+              <p>
+                Non. Le diagnostic repose sur une évaluation clinique globale,
+                prenant en compte les symptômes, leur ancienneté, leur présence
+                dans différents contextes et leur retentissement. Les questionnaires
+                et tests sont des éléments complémentaires de cette démarche.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Que se passe-t-il après le bilan ?</summary>
+            <div class="faq-answer">
+              <p>
+                Les résultats sont restitués et discutés. Des recommandations
+                individualisées peuvent être proposées, ainsi que des pistes
+                d’adaptation ou une orientation vers d’autres professionnels si
+                cela paraît nécessaire.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="annee"></span> Cabinet Cravero · Psychologie et neuropsychologie</p>
+      <p>
+        <a href="../index.html">Retour à l’accueil</a>
+      </p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- SECTION 11 : FAQ -->
-<section>
-  <h2>❓ Questions fréquentes</h2>
+  <script>
+    (() => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".main-nav");
 
-  <p><strong>Le TDAH peut-il être diagnostiqué à tout âge ?</strong><br>
-  Oui, chez l’enfant, l’adolescent et l’adulte.</p>
+      if (toggle && nav) {
+        const closeMenu = () => {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Ouvrir le menu");
+          toggle.textContent = "☰";
+        };
 
-  <p><strong>Le bilan est-il long ?</strong><br>
-  Il dure généralement entre 2 et 4 heures selon les besoins.</p>
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+          toggle.setAttribute(
+            "aria-label",
+            isOpen ? "Fermer le menu" : "Ouvrir le menu"
+          );
+          toggle.textContent = isOpen ? "✕" : "☰";
+        });
 
-  <p><strong>Faut-il une ordonnance ?</strong><br>
-  Non, la consultation est en accès direct.</p>
-</section>
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
 
-<script src="../scripts/toggle.js"></script>
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeMenu();
+            toggle.focus();
+          }
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            nav.classList.contains("is-open") &&
+            !nav.contains(event.target) &&
+            !toggle.contains(event.target)
+          ) {
+            closeMenu();
+          }
+        });
+      }
+
+      const year = document.getElementById("annee");
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>

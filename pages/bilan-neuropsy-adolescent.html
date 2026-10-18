@@ -1,172 +1,1466 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bilan neuropsychologique adolescent à Châlons-en-Champagne | TDAH, attention, mémoire, orientation</title>
+  <title>Bilan neuropsychologique adolescent à Châlons-en-Champagne | Julien Cravero</title>
 
-  <meta name="description" content="Bilan neuropsychologique pour adolescent à Châlons-en-Champagne. Troubles de l’attention, TDAH, difficultés scolaires, mémoire, fonctions exécutives et orientation scolaire.">
+  <meta name="description" content="Bilan neuropsychologique pour adolescent à Châlons-en-Champagne : attention, TDAH, mémoire, fonctions exécutives, difficultés scolaires et orientation. Évaluation personnalisée et recommandations adaptées.">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173c42">
+  <meta name="robots" content="index, follow">
 
-  <link rel="stylesheet" href="../scripts/style.css">
+  <link rel="canonical" href="https://neuropsy-cravero.github.io/cabinet/pages/bilan-neuropsy-adolescent.html">
+  <link rel="icon" href="../images/Psychologue_Cravero_favicon.ico">
+
+  <style>
+    :root {
+      --primary: #173c42;
+      --primary-light: #285b60;
+      --accent: #8fc7bd;
+      --accent-light: #e8f3f0;
+      --background: #f6f8f7;
+      --surface: #ffffff;
+      --text: #253537;
+      --muted: #617174;
+      --border: #dce6e3;
+      --shadow: 0 12px 35px rgba(23, 60, 66, 0.08);
+      --radius: 18px;
+      --content: 1120px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--primary-light);
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #e4a84b;
+      outline-offset: 4px;
+    }
+
+    p {
+      margin: 0 0 1.15rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--primary);
+      font-weight: 750;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 0 1.4rem;
+      font-size: clamp(2.15rem, 5vw, 3.7rem);
+    }
+
+    h2 {
+      margin: 0 0 1.3rem;
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+    }
+
+    h3 {
+      margin: 0 0 0.7rem;
+      font-size: 1.18rem;
+    }
+
+    ul {
+      margin: 0 0 1.3rem;
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.55rem;
+      padding-left: 0.15rem;
+    }
+
+    .container {
+      width: min(var(--content), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 2000;
+      padding: 12px 18px;
+      color: white;
+      background: var(--primary);
+      border-radius: 8px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      width: min(1280px, calc(100% - 40px));
+      min-height: 76px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      border-radius: 14px;
+      background: var(--accent-light);
+      font-size: 1.35rem;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.77rem;
+      font-weight: 500;
+    }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+      color: var(--primary);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .main-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .main-nav li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.93rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .main-nav a:hover {
+      color: var(--primary-light);
+    }
+
+    .main-nav .nav-cta {
+      padding: 10px 16px;
+      color: white;
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    .main-nav .nav-cta:hover {
+      color: white;
+      background: var(--primary-light);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 80px;
+      background:
+        radial-gradient(
+          ellipse at 95% 10%,
+          rgba(143, 199, 189, 0.3),
+          transparent 35%
+        ),
+        linear-gradient(135deg, #edf5f2 0%, #f8faf9 65%, #eaf3f0 100%);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -200px;
+      width: 430px;
+      height: 430px;
+      content: "";
+      border: 1px solid rgba(40, 91, 96, 0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: var(--primary-light);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 26px;
+      height: 3px;
+      content: "";
+      background: var(--accent);
+      border-radius: 99px;
+    }
+
+    .hero-intro {
+      max-width: 760px;
+      color: #4e6264;
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 21px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      font: inherit;
+      font-weight: 750;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+    }
+
+    .btn-primary:hover {
+      color: white;
+      background: var(--primary-light);
+    }
+
+    .btn-secondary {
+      color: var(--primary);
+      background: white;
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-light);
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Sections */
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .section-white {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      max-width: 790px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--primary-light);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .text-column {
+      max-width: 850px;
+    }
+
+    /* Cards */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 27px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 5px 18px rgba(23, 60, 66, 0.035);
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      background: var(--accent-light);
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .check-list {
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      margin-bottom: 12px;
+      padding-left: 31px;
+    }
+
+    .check-list li::before {
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      display: grid;
+      place-items: center;
+      width: 21px;
+      height: 21px;
+      content: "✓";
+      color: var(--primary);
+      background: var(--accent-light);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    /* Steps */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      counter-reset: assessment;
+    }
+
+    .step {
+      position: relative;
+      min-height: 150px;
+      padding: 25px 25px 25px 78px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      counter-increment: assessment;
+    }
+
+    .step::before {
+      position: absolute;
+      top: 25px;
+      left: 23px;
+      display: grid;
+      place-items: center;
+      width: 39px;
+      height: 39px;
+      content: counter(assessment, decimal-leading-zero);
+      color: var(--primary);
+      background: var(--accent-light);
+      border-radius: 12px;
+      font-weight: 850;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 64px 0;
+      background: var(--primary);
+      color: white;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta-inner h2 {
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .cta-inner p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: #d7e6e3;
+    }
+
+    .cta-section .btn {
+      flex-shrink: 0;
+      color: var(--primary);
+      background: white;
+    }
+
+    .cta-section .btn:hover {
+      background: var(--accent-light);
+    }
+
+    /* Modalités */
+
+    .quote-panel {
+      max-width: 900px;
+      padding: 30px;
+      background: var(--accent-light);
+      border: 1px solid #d1e7e1;
+      border-radius: var(--radius);
+    }
+
+    .quote-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Localisation */
+
+    .location-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .location-details {
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .location-details p {
+      color: var(--muted);
+    }
+
+    .map-frame {
+      min-height: 320px;
+      overflow: hidden;
+      background: #e8efed;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 900px;
+    }
+
+    .faq-item {
+      margin-bottom: 13px;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 20px 52px 20px 22px;
+      color: var(--primary);
+      font-weight: 750;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      content: "+";
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 22px 20px;
+      color: var(--muted);
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 30px 0;
+      background: #102e33;
+      color: #d7e6e3;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .site-footer p {
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+    .site-footer a {
+      color: white;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 12px 20px 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .main-nav.is-open {
+        display: block;
+      }
+
+      .main-nav ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        width: min(var(--content), 100%);
+        margin: auto;
+      }
+
+      .main-nav a {
+        display: block;
+        padding: 13px 8px;
+      }
+
+      .main-nav .nav-cta {
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(calc(100% - 32px), var(--content));
+      }
+
+      .header-inner {
+        width: calc(100% - 32px);
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 0.94rem;
+      }
+
+      .brand small {
+        font-size: 0.72rem;
+      }
+
+      .hero {
+        padding: 62px 0 58px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .card-grid,
+      .steps,
+      .location-box {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 23px;
+      }
+
+      .step {
+        padding-left: 72px;
+      }
+
+      .quote-panel,
+      .location-details {
+        padding: 23px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 270px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Bilan neuropsychologique adolescent à Châlons-en-Champagne",
+    "url": "https://neuropsy-cravero.github.io/cabinet/pages/bilan-neuropsy-adolescent.html",
+    "description": "Bilan neuropsychologique chez l'adolescent à Châlons-en-Champagne : attention, mémoire, fonctions exécutives, difficultés scolaires et orientation.",
+    "inLanguage": "fr-FR",
+    "about": {
+      "@type": "Service",
+      "name": "Bilan neuropsychologique adolescent",
+      "areaServed": [
+        "Châlons-en-Champagne",
+        "Reims",
+        "Épernay",
+        "Vitry-le-François"
+      ],
+      "provider": {
+        "@type": "Person",
+        "name": "Julien Cravero",
+        "jobTitle": "Psychologue"
+      }
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
 
-<header>
-  <div class="banner">
-    <img src="../Banner_v05.png" alt="Psychologue Châlons-en-Champagne – bilan neuropsychologique adolescent">
-  </div>
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Cabinet Cravero, accueil">
+        <span class="brand-mark" aria-hidden="true">🧠</span>
+        <span>
+          Cabinet Cravero
+          <small>Psychologie · Neuropsychologie</small>
+        </span>
+      </a>
 
-  <nav aria-label="Navigation principale">
-    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
-    <ul>
-      <li><a href="../index.html#tarifs">Retour à l'accueil</a></li>
-    </ul>
-  </nav>
-</header>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="navigation-principale">
+        ☰
+      </button>
 
-<!-- SECTION 1 : INTRO -->
-<section>
-  <h1>Bilan neuropsychologique pour adolescent à Châlons-en-Champagne</h1>
-
-  <p>
-    Le cabinet de psychologie et neuropsychologie accompagne les adolescents présentant des difficultés scolaires,
-    attentionnelles, comportementales ou de mémoire.
-  </p>
-
-  <p>
-    Nous recevons des patients à Châlons-en-Champagne ainsi que depuis Reims, Épernay et Vitry-le-François.
-  </p>
-</section>
-
-<!-- CTA -->
-<section>
-  <div class="container">
-    <div class="highlight">
-      <p>Pour prendre rendez-vous, merci de cliquer sur le lien suivant.</p>
-      <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-rdv">Prendre rendez-vous</a>
+      <nav class="main-nav" id="navigation-principale" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="#indications">Quand consulter ?</a></li>
+          <li><a href="#tdah">TDAH adolescent</a></li>
+          <li><a href="#bilan">Le bilan</a></li>
+          <li><a href="#modalites">Modalités</a></li>
+          <li>
+            <a
+              class="nav-cta"
+              href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+              target="_blank"
+              rel="noopener noreferrer">Prendre rendez-vous</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- SECTION 2 : POURQUOI BILAN -->
-<section>
-  <h2>🧠 Pourquoi réaliser un bilan chez l’adolescent ?</h2>
+  <main id="contenu">
 
-  <p>
-    L’adolescence est une période de changements cognitifs et scolaires importants.
-    Certaines difficultés peuvent apparaître ou s’intensifier à ce moment-là.
-  </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Psychologie · Neuropsychologie</span>
 
-  <p>
-    Le bilan neuropsychologique permet d’identifier précisément les causes des difficultés et de mieux comprendre le fonctionnement cognitif.
-  </p>
+          <h1>Bilan neuropsychologique pour adolescent à Châlons-en-Champagne</h1>
 
-  <ul>
-    <li>Difficultés scolaires persistantes</li>
-    <li>Trouble de l’attention (TDAH)</li>
-    <li>Difficultés de concentration</li>
-    <li>Problèmes de mémoire</li>
-    <li>Désorganisation et lenteur de travail</li>
-  </ul>
-</section>
+          <p class="hero-intro">
+            Les difficultés d'attention, de mémoire, d'organisation ou
+            d'apprentissage peuvent rendre la scolarité et le quotidien plus
+            exigeants. Le bilan neuropsychologique vise à mieux comprendre le
+            fonctionnement cognitif de l'adolescent et les répercussions de
+            ses difficultés.
+          </p>
 
-<!-- SECTION 3 : TDAH / ATTENTION -->
-<section>
-  <h2>🎯 Attention et TDAH chez l’adolescent</h2>
+          <p class="hero-intro">
+            Le cabinet accueille les adolescents et leur famille à
+            Châlons-en-Champagne, ainsi que les personnes venant notamment de
+            Reims, Épernay et Vitry-le-François.
+          </p>
 
-  <p>
-    Les troubles de l’attention peuvent fortement impacter la scolarité :
-    difficultés à se concentrer, distractibilité, oubli des consignes ou difficulté à terminer les tâches.
-  </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+              target="_blank"
+              rel="noopener noreferrer">Prendre rendez-vous ↗</a>
 
-  <p>
-    Le bilan permet d’évaluer ces difficultés et de déterminer s’il existe un TDAH ou un trouble attentionnel associé.
-  </p>
-</section>
+            <a class="btn btn-secondary" href="#bilan">
+              Découvrir le déroulement du bilan
+            </a>
+          </div>
 
-<!-- SECTION 4 : IMPACT SCOLAIRE -->
-<section>
-  <h2>📚 Impact sur la scolarité et le quotidien</h2>
+          <p class="hero-note">
+            Cabinet à Châlons-en-Champagne · Consultations sur rendez-vous
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <p>
-    Les difficultés cognitives peuvent entraîner :
-  </p>
+    <!-- INDICATIONS -->
+    <section class="section section-white" id="indications">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Quand consulter ?</span>
+          <h2>Pourquoi réaliser un bilan neuropsychologique à l'adolescence ?</h2>
+          <p>
+            Le collège et le lycée sollicitent de plus en plus l'autonomie,
+            l'organisation, la mémorisation et la capacité à gérer plusieurs
+            tâches. Certaines difficultés peuvent devenir plus visibles ou
+            avoir un retentissement important sur les apprentissages.
+          </p>
+        </div>
 
-  <ul>
-    <li>Baisse des résultats scolaires</li>
-    <li>Difficultés d’organisation</li>
-    <li>Fatigue cognitive importante</li>
-    <li>Perte de motivation</li>
-    <li>Difficultés dans les devoirs et apprentissages</li>
-  </ul>
-</section>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎯</div>
+            <h3>Attention et concentration</h3>
+            <p>
+              Distractibilité, difficulté à rester concentré, oublis de consignes
+              ou difficulté à terminer un travail malgré les efforts fournis.
+            </p>
+          </article>
 
-<!-- SECTION 5 : DÉROULEMENT -->
-<section>
-  <h2>📋 Déroulement du bilan neuropsychologique</h2>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧠</div>
+            <h3>Mémoire et apprentissages</h3>
+            <p>
+              Difficulté à retenir les leçons, à mémoriser des informations,
+              à retrouver des connaissances apprises ou à utiliser des stratégies
+              d'apprentissage efficaces.
+            </p>
+          </article>
 
-  <ul>
-    <li>Entretien avec l’adolescent et la famille</li>
-    <li>Analyse du développement et du parcours scolaire</li>
-    <li>Tests cognitifs standardisés</li>
-    <li>Évaluation de l’attention, mémoire et fonctions exécutives</li>
-    <li>Restitution détaillée avec recommandations personnalisées</li>
-  </ul>
-</section>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🗂️</div>
+            <h3>Organisation et fonctions exécutives</h3>
+            <p>
+              Problèmes de planification, de gestion du temps, d'anticipation,
+              de flexibilité ou de hiérarchisation des priorités.
+            </p>
+          </article>
 
-<!-- SECTION 6 : ORIENTATION -->
-<section>
-  <h2>🎓 Bilan et orientation scolaire</h2>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📚</div>
+            <h3>Difficultés scolaires</h3>
+            <p>
+              Résultats irréguliers, lenteur, surcharge face aux devoirs ou
+              décalage entre les efforts fournis et les résultats obtenus.
+            </p>
+          </article>
 
-  <p>
-    Le bilan peut également aider à mieux comprendre le fonctionnement de l’adolescent
-    afin d’orienter ses choix scolaires et professionnels.
-  </p>
-</section>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🔎</div>
+            <h3>Questionnement autour du TDAH</h3>
+            <p>
+              Difficultés persistantes d'attention, d'impulsivité ou d'organisation
+              qui conduisent à s'interroger sur un éventuel trouble attentionnel.
+            </p>
+          </article>
 
-<!-- SECTION 7 : LOCALISATION -->
-<section>
-  <h2>📍 Cabinet à Châlons-en-Champagne</h2>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧭</div>
+            <h3>Compréhension du profil cognitif</h3>
+            <p>
+              Besoin d'identifier les points d'appui, les difficultés et les
+              conditions de travail susceptibles de faciliter les apprentissages.
+            </p>
+          </article>
+        </div>
 
-  <p>
-    Le cabinet est situé au 18 rue Dom. Pérignon, 51000 Châlons-en-Champagne.
-    Il est facilement accessible depuis Reims, Épernay et Vitry-le-François.
-  </p>
-</section>
+        <div class="text-column" style="margin-top:30px">
+          <p>
+            Les difficultés scolaires peuvent avoir des causes diverses et
+            parfois associées : sommeil, stress, anxiété, humeur, contexte
+            scolaire, difficultés spécifiques d'apprentissage ou fonctionnement
+            attentionnel. Le bilan vise à examiner la demande dans son contexte,
+            sans présumer d'une cause unique.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- CTA -->
-<section>
-  <div class="container">
-    <div class="highlight">
-      <p>Pour prendre rendez-vous, merci de cliquer sur le lien suivant.</p>
-      <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-rdv">Prendre rendez-vous</a>
+    <!-- TDAH -->
+    <section class="section" id="tdah">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Attention et fonctions exécutives</span>
+          <h2>Le TDAH chez l'adolescent</h2>
+          <p>
+            Le trouble du déficit de l'attention avec ou sans hyperactivité
+            peut se manifester par des difficultés d'attention, d'impulsivité
+            ou d'agitation. À l'adolescence, ses conséquences peuvent notamment
+            concerner l'autonomie, les devoirs et l'organisation scolaire.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎯</div>
+            <h3>Inattention</h3>
+            <p>
+              Difficulté à maintenir son attention, distractibilité, oublis
+              de consignes ou tendance à laisser certaines tâches inachevées.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⚡</div>
+            <h3>Impulsivité et agitation</h3>
+            <p>
+              Tendance à répondre rapidement, à interrompre, à agir sans avoir
+              suffisamment anticipé ou à ressentir une agitation intérieure.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🗓️</div>
+            <h3>Gestion du quotidien</h3>
+            <p>
+              Difficultés de planification, de gestion du temps, de priorisation
+              ou de maintien d'une organisation régulière malgré les efforts.
+            </p>
+          </article>
+        </div>
+
+        <div class="text-column" style="margin-top:30px">
+          <p>
+            L'évaluation d'une hypothèse de TDAH prend en compte les symptômes,
+            leur histoire développementale, leur présence dans différents
+            contextes et leurs conséquences. Elle nécessite également de
+            considérer les autres explications possibles et les difficultés
+            éventuellement associées.
+          </p>
+
+          <p>
+            Les entretiens, les informations provenant de l'adolescent et de
+            sa famille, les questionnaires et les tests cognitifs peuvent
+            contribuer à l'évaluation lorsqu'ils sont indiqués. Aucun test
+            neuropsychologique isolé ne permet à lui seul de confirmer ou
+            d'exclure un TDAH.
+          </p>
+
+          <p>
+            <a href="bilan-neuropsy-TDAH.html">
+              En savoir plus sur l'évaluation du TDAH →
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCOLARITÉ ET QUOTIDIEN -->
+    <section class="section section-white" id="quotidien">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Retentissement fonctionnel</span>
+          <h2>Les difficultés cognitives dans la scolarité et le quotidien</h2>
+          <p>
+            Une difficulté cognitive peut mobiliser beaucoup d'énergie et rendre
+            certaines activités plus coûteuses. L'objectif est de comprendre
+            comment elle se manifeste dans les situations concrètes.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📖</div>
+            <h3>Dans les apprentissages</h3>
+            <p>
+              Difficulté à retenir une leçon, à suivre une consigne complexe,
+              à sélectionner les informations importantes ou à réutiliser
+              les connaissances acquises.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🏠</div>
+            <h3>À la maison</h3>
+            <p>
+              Difficulté à commencer les devoirs, à organiser son matériel,
+              à planifier le travail ou à terminer les tâches prévues.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🔋</div>
+            <h3>Fatigue et motivation</h3>
+            <p>
+              Effort mental important, besoin de pauses, découragement face
+              aux tâches complexes ou impression de devoir fournir davantage
+              d'efforts que les autres.
+            </p>
+          </article>
+        </div>
+
+        <p style="margin-top:28px; color:var(--muted)">
+          Ces difficultés ne sont pas spécifiques à un trouble donné. Leur
+          interprétation nécessite de tenir compte de leur ancienneté, de leur
+          fréquence, de leur contexte et de leur retentissement.
+        </p>
+      </div>
+    </section>
+
+    <!-- DÉROULEMENT -->
+    <section class="section" id="bilan">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">La démarche d'évaluation</span>
+          <h2>Comment se déroule un bilan neuropsychologique ?</h2>
+          <p>
+            Le contenu du bilan est adapté à la demande et aux questions
+            cliniques. Les outils utilisés sont sélectionnés en fonction
+            de l'âge, du parcours et des difficultés rapportées.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <h3>Entretien initial</h3>
+            <p>
+              Présentation de la demande, des difficultés observées, du
+              développement et du parcours scolaire. La place de l'adolescent
+              et celle de sa famille sont adaptées à la situation.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Analyse des difficultés</h3>
+            <p>
+              Recueil des informations utiles concernant les apprentissages,
+              le quotidien, les stratégies utilisées et les facteurs pouvant
+              influencer les performances.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Évaluation cognitive</h3>
+            <p>
+              Passation d'épreuves standardisées choisies selon les besoins :
+              attention, mémoire, vitesse de traitement, raisonnement ou
+              fonctions exécutives.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Analyse et restitution</h3>
+            <p>
+              Mise en perspective des résultats avec l'entretien et les
+              observations, explication du profil cognitif et propositions
+              de recommandations adaptées.
+            </p>
+          </article>
+        </div>
+
+        <div class="text-column" style="margin-top:30px">
+          <h3>Les fonctions cognitives pouvant être explorées</h3>
+
+          <ul class="check-list">
+            <li><strong>Attention :</strong> concentration, attention sélective et maintien de l'effort attentionnel.</li>
+            <li><strong>Mémoire :</strong> apprentissage, mémorisation, rappel et mémoire de travail.</li>
+            <li><strong>Vitesse de traitement :</strong> rapidité de traitement d'informations simples dans des conditions définies.</li>
+            <li><strong>Fonctions exécutives :</strong> inhibition, flexibilité, planification et organisation.</li>
+            <li><strong>Raisonnement :</strong> résolution de problèmes et traitement de nouvelles informations.</li>
+          </ul>
+
+          <p>
+            Toutes ces fonctions ne sont pas nécessairement évaluées lors de
+            chaque bilan. Le choix des épreuves dépend de la question clinique
+            et des informations nécessaires pour y répondre.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIFS -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Après l'évaluation</span>
+          <h2>Que permet le bilan neuropsychologique ?</h2>
+          <p>
+            Le bilan vise à mieux comprendre le profil cognitif de l'adolescent
+            et à proposer des pistes utiles, en tenant compte de ses besoins,
+            de ses ressources et de son environnement.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🔎</div>
+            <h3>Comprendre son profil cognitif</h3>
+            <p>
+              Identifier les points d'appui et les difficultés observées,
+              et mieux comprendre les facteurs susceptibles d'influencer
+              les apprentissages.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧭</div>
+            <h3>Adapter les méthodes de travail</h3>
+            <p>
+              Envisager des stratégies d'organisation, de mémorisation,
+              de planification et de gestion de l'effort adaptées au jeune.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🤝</div>
+            <h3>Réfléchir aux suites utiles</h3>
+            <p>
+              Identifier des adaptations possibles, des accompagnements
+              complémentaires ou des échanges avec les professionnels
+              concernés lorsque cela est pertinent.
+            </p>
+          </article>
+        </div>
+
+        <div class="text-column" style="margin-top:30px">
+          <p>
+            Le bilan peut apporter des informations utiles à la réflexion
+            concernant la scolarité et l'orientation. Il ne détermine toutefois
+            pas à lui seul un choix d'orientation : les intérêts, les souhaits
+            du jeune, son parcours et son contexte doivent également être pris
+            en compte.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALITÉS -->
+    <section class="section" id="modalites">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Informations pratiques</span>
+          <h2>Modalités de l'évaluation</h2>
+        </div>
+
+        <div class="quote-panel">
+          <h3>Une démarche individualisée</h3>
+
+          <p>
+            Les besoins d'évaluation varient selon la demande, les difficultés
+            rencontrées et les fonctions cognitives à explorer. Les modalités
+            sont donc définies en fonction de la situation de l'adolescent.
+          </p>
+
+          <p>
+            <strong>La prestation est proposée uniquement sur devis personnalisé,</strong>
+            établi après un premier échange permettant de préciser la demande
+            et les modalités de l'évaluation envisagée.
+          </p>
+
+          <p>
+            La prise de rendez-vous s'effectue en ligne. Le déroulement de la
+            démarche est discuté avec le cabinet en fonction des besoins identifiés.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <div>
+          <h2>Vous vous interrogez sur les difficultés de votre adolescent ?</h2>
+          <p>
+            Prenez rendez-vous pour présenter votre demande et déterminer si une
+            évaluation neuropsychologique est pertinente dans sa situation.
+          </p>
+        </div>
+
+        <a
+          class="btn"
+          href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+          target="_blank"
+          rel="noopener noreferrer">Prendre rendez-vous ↗</a>
+      </div>
+    </section>
+
+    <!-- LOCALISATION -->
+    <section class="section" id="localisation">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Accès au cabinet</span>
+          <h2>Neuropsychologue pour adolescent à Châlons-en-Champagne</h2>
+          <p>
+            Le cabinet est situé à Châlons-en-Champagne, dans la Marne. Il accueille
+            des adolescents et leur famille venant notamment de Châlons-en-Champagne,
+            Reims, Épernay et Vitry-le-François.
+          </p>
+        </div>
+
+        <div class="location-box">
+          <div class="location-details">
+            <h3>Cabinet Cravero</h3>
+
+            <p>
+              <strong>Adresse</strong><br>
+              18 rue Dom. Pérignon<br>
+              51000 Châlons-en-Champagne
+            </p>
+
+            <p>
+              <strong>Consultations</strong><br>
+              Sur rendez-vous.
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.google.com/maps/search/?api=1&query=18+rue+Dom+P%C3%A9rignon+51000+Ch%C3%A2lons-en-Champagne"
+              target="_blank"
+              rel="noopener noreferrer">Itinéraire ↗</a>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="Localisation du cabinet de neuropsychologie à Châlons-en-Champagne"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83826.1611855049!2d4.322825!3d48.96172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ebdf8679a49ae9%3A0xdf5cf80e3b6902c6!2sCabinet%20Neuropsychologue%20Cravero!5e0!3m2!1sfr!2sfr!4v1775661170406!5m2!1sfr!2sfr"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-white" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Questions fréquentes</span>
+          <h2>Questions sur le bilan neuropsychologique adolescent</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>À partir de quel âge peut-on réaliser un bilan neuropsychologique ?</summary>
+            <div class="faq-answer">
+              <p>
+                Le bilan peut être envisagé à l'adolescence lorsque des questions
+                concernant l'attention, la mémoire, les apprentissages ou le
+                fonctionnement cognitif nécessitent une évaluation. Le contenu
+                est adapté à l'âge et à la demande.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Le bilan permet-il de diagnostiquer un TDAH ?</summary>
+            <div class="faq-answer">
+              <p>
+                Le bilan peut contribuer à l'évaluation des difficultés
+                attentionnelles et exécutives. Toutefois, les résultats aux
+                tests ne suffisent pas à eux seuls à établir ou à exclure un
+                diagnostic de TDAH, qui nécessite une évaluation clinique globale.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Le bilan peut-il aider en cas de difficultés scolaires ?</summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Il peut aider à mieux comprendre certains mécanismes
+                cognitifs impliqués dans les difficultés, à identifier les
+                points d'appui et à proposer des stratégies ou adaptations
+                pertinentes. D'autres évaluations spécialisées peuvent être
+                indiquées selon la situation.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Le bilan peut-il aider pour l'orientation scolaire ?</summary>
+            <div class="faq-answer">
+              <p>
+                Il peut apporter des informations utiles sur le profil cognitif
+                et les conditions de travail favorables. L'orientation doit
+                également tenir compte des intérêts, des souhaits du jeune,
+                de son parcours scolaire et de son contexte.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Combien de temps dure le bilan ?</summary>
+            <div class="faq-answer">
+              <p>
+                La durée dépend de la demande, des fonctions à explorer et des
+                investigations nécessaires. Les modalités sont précisées après
+                un premier échange.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Les parents participent-ils au bilan ?</summary>
+            <div class="faq-answer">
+              <p>
+                La famille contribue généralement au recueil des informations
+                nécessaires à la compréhension de la situation. La place donnée
+                aux parents et à l'adolescent est adaptée à l'âge, à la demande
+                et aux objectifs de l'évaluation.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Comment sont définies les modalités financières ?</summary>
+            <div class="faq-answer">
+              <p>
+                La prestation est proposée uniquement sur devis personnalisé.
+                Les modalités sont précisées après un premier échange sur la
+                demande et le contenu de l'évaluation envisagée.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        © <span id="annee"></span> Cabinet Cravero · Psychologie et neuropsychologie
+      </p>
+      <p><a href="../index.html">Retour à l’accueil</a></p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- FAQ -->
-<section>
-  <h2>❓ Questions fréquentes</h2>
+  <script>
+    (() => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".main-nav");
 
-  <p><strong>À partir de quel âge peut-on faire un bilan ?</strong><br>
-  Le bilan est adapté aux adolescents dès le collège.</p>
+      if (toggle && nav) {
+        const closeMenu = () => {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Ouvrir le menu");
+          toggle.textContent = "☰";
+        };
 
-  <p><strong>Le bilan aide-t-il pour l’orientation scolaire ?</strong><br>
-  Oui, il permet de mieux comprendre les capacités cognitives et d’orienter les choix scolaires.</p>
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
 
-  <p><strong>Combien de temps dure un bilan ?</strong><br>
-  En général entre 2 et 4 heures selon les besoins.</p>
-</section>
+          toggle.setAttribute("aria-expanded", String(isOpen));
+          toggle.setAttribute(
+            "aria-label",
+            isOpen ? "Fermer le menu" : "Ouvrir le menu"
+          );
+          toggle.textContent = isOpen ? "✕" : "☰";
+        });
 
-<script src="../scripts/toggle.js"></script>
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeMenu();
+            toggle.focus();
+          }
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            nav.classList.contains("is-open") &&
+            !nav.contains(event.target) &&
+            !toggle.contains(event.target)
+          ) {
+            closeMenu();
+          }
+        });
+      }
+
+      const year = document.getElementById("annee");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>

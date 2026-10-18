@@ -1,179 +1,1386 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bilan de la mémoire à Châlons-en-Champagne | Troubles mémoire enfant, adolescent et adulte</title>
+  <title>Bilan mémoire à Châlons-en-Champagne | Julien Cravero</title>
 
-  <meta name="description" content="Bilan de la mémoire à Châlons-en-Champagne. Évaluation des troubles de mémoire chez l’enfant, l’adolescent et l’adulte. Tests neuropsychologiques complets.">
+  <meta name="description" content="Bilan neuropsychologique de la mémoire à Châlons-en-Champagne. Évaluation des difficultés mnésiques, de l'attention et des fonctions cognitives, avec recommandations personnalisées.">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173c42">
+  <meta name="robots" content="index, follow">
 
-  <link rel="stylesheet" href="../scripts/style.css">
+  <link rel="canonical" href="https://neuropsy-cravero.github.io/cabinet/pages/bilan-neuropsy-memoire.html">
+  <link rel="icon" href="../images/Psychologue_Cravero_favicon.ico">
+
+  <style>
+    :root {
+      --primary: #173c42;
+      --primary-light: #285b60;
+      --accent: #8fc7bd;
+      --accent-light: #e8f3f0;
+      --background: #f6f8f7;
+      --surface: #ffffff;
+      --text: #253537;
+      --muted: #617174;
+      --border: #dce6e3;
+      --shadow: 0 12px 35px rgba(23, 60, 66, 0.08);
+      --radius: 18px;
+      --content: 1120px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--primary-light);
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #e4a84b;
+      outline-offset: 4px;
+    }
+
+    p {
+      margin: 0 0 1.15rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--primary);
+      font-weight: 750;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 0 1.4rem;
+      font-size: clamp(2.15rem, 5vw, 3.7rem);
+    }
+
+    h2 {
+      margin: 0 0 1.3rem;
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+    }
+
+    h3 {
+      margin: 0 0 0.7rem;
+      font-size: 1.18rem;
+    }
+
+    ul {
+      margin: 0 0 1.3rem;
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.55rem;
+      padding-left: 0.15rem;
+    }
+
+    .container {
+      width: min(var(--content), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 2000;
+      padding: 12px 18px;
+      color: white;
+      background: var(--primary);
+      border-radius: 8px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      width: min(1280px, calc(100% - 40px));
+      min-height: 76px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      border-radius: 14px;
+      background: var(--accent-light);
+      font-size: 1.35rem;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.77rem;
+      font-weight: 500;
+    }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+      color: var(--primary);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .main-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .main-nav li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.93rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .main-nav a:hover {
+      color: var(--primary-light);
+    }
+
+    .main-nav .nav-cta {
+      padding: 10px 16px;
+      color: white;
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    .main-nav .nav-cta:hover {
+      color: white;
+      background: var(--primary-light);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 80px;
+      background:
+        radial-gradient(
+          ellipse at 95% 10%,
+          rgba(143, 199, 189, 0.3),
+          transparent 35%
+        ),
+        linear-gradient(135deg, #edf5f2 0%, #f8faf9 65%, #eaf3f0 100%);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -200px;
+      width: 430px;
+      height: 430px;
+      content: "";
+      border: 1px solid rgba(40, 91, 96, 0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: var(--primary-light);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 26px;
+      height: 3px;
+      content: "";
+      background: var(--accent);
+      border-radius: 99px;
+    }
+
+    .hero-intro {
+      max-width: 760px;
+      color: #4e6264;
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 21px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      font: inherit;
+      font-weight: 750;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+    }
+
+    .btn-primary:hover {
+      color: white;
+      background: var(--primary-light);
+    }
+
+    .btn-secondary {
+      color: var(--primary);
+      background: white;
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-light);
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Sections */
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .section-white {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      max-width: 790px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--primary-light);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .text-column {
+      max-width: 850px;
+    }
+
+    /* Cards */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 27px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 5px 18px rgba(23, 60, 66, 0.035);
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      background: var(--accent-light);
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .check-list {
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      margin-bottom: 12px;
+      padding-left: 31px;
+    }
+
+    .check-list li::before {
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      display: grid;
+      place-items: center;
+      width: 21px;
+      height: 21px;
+      content: "✓";
+      color: var(--primary);
+      background: var(--accent-light);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    /* Steps */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      counter-reset: assessment;
+    }
+
+    .step {
+      position: relative;
+      min-height: 150px;
+      padding: 25px 25px 25px 78px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      counter-increment: assessment;
+    }
+
+    .step::before {
+      position: absolute;
+      top: 25px;
+      left: 23px;
+      display: grid;
+      place-items: center;
+      width: 39px;
+      height: 39px;
+      content: counter(assessment, decimal-leading-zero);
+      color: var(--primary);
+      background: var(--accent-light);
+      border-radius: 12px;
+      font-weight: 850;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 64px 0;
+      background: var(--primary);
+      color: white;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta-inner h2 {
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .cta-inner p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: #d7e6e3;
+    }
+
+    .cta-section .btn {
+      flex-shrink: 0;
+      color: var(--primary);
+      background: white;
+    }
+
+    .cta-section .btn:hover {
+      background: var(--accent-light);
+    }
+
+    /* Modalités */
+
+    .quote-panel {
+      max-width: 900px;
+      padding: 30px;
+      background: var(--accent-light);
+      border: 1px solid #d1e7e1;
+      border-radius: var(--radius);
+    }
+
+    .quote-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Localisation */
+
+    .location-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .location-details {
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .location-details p {
+      color: var(--muted);
+    }
+
+    .map-frame {
+      min-height: 320px;
+      overflow: hidden;
+      background: #e8efed;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 900px;
+    }
+
+    .faq-item {
+      margin-bottom: 13px;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 20px 52px 20px 22px;
+      color: var(--primary);
+      font-weight: 750;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      content: "+";
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 22px 20px;
+      color: var(--muted);
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 30px 0;
+      background: #102e33;
+      color: #d7e6e3;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .site-footer p {
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+    .site-footer a {
+      color: white;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 12px 20px 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .main-nav.is-open {
+        display: block;
+      }
+
+      .main-nav ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        width: min(var(--content), 100%);
+        margin: auto;
+      }
+
+      .main-nav a {
+        display: block;
+        padding: 13px 8px;
+      }
+
+      .main-nav .nav-cta {
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(calc(100% - 32px), var(--content));
+      }
+
+      .header-inner {
+        width: calc(100% - 32px);
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 0.94rem;
+      }
+
+      .brand small {
+        font-size: 0.72rem;
+      }
+
+      .hero {
+        padding: 62px 0 58px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .card-grid,
+      .steps,
+      .location-box {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 23px;
+      }
+
+      .step {
+        padding-left: 72px;
+      }
+
+      .quote-panel,
+      .location-details {
+        padding: 23px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 270px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": "https://neuropsy-cravero.github.io/cabinet/#cabinet",
+    "name": "Cabinet Cravero - Psychologie et neuropsychologie",
+    "url": "https://neuropsy-cravero.github.io/cabinet/pages/bilan-neuropsy-memoire.html",
+    "description": "Évaluation neuropsychologique des difficultés de mémoire et des fonctions cognitives à Châlons-en-Champagne.",
+    "telephone": "+33654451069",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "18 rue Dom. Pérignon",
+      "addressLocality": "Châlons-en-Champagne",
+      "postalCode": "51000",
+      "addressRegion": "Grand Est",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      "Châlons-en-Champagne",
+      "Reims",
+      "Épernay",
+      "Vitry-le-François"
+    ],
+    "medicalSpecialty": "Psychology",
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Bilan neuropsychologique de la mémoire"
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Cabinet+Neuropsychologue+Cravero+Chalons-en-Champagne"
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
 
-<header>
-  <div class="banner">
-    <img src="../Banner_v05.png" alt="Psychologue Châlons-en-Champagne – bilan mémoire">
-  </div>
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Cabinet Cravero, accueil">
+        <span class="brand-mark" aria-hidden="true">🧠</span>
+        <span>
+          Cabinet Cravero
+          <small>Psychologie · Neuropsychologie</small>
+        </span>
+      </a>
 
-  <nav aria-label="Navigation principale">
-    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
-    <ul>
-      <li><a href="../index.html#tarifs">Retour à l'accueil</a></li>
-    </ul>
-  </nav>
-</header>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="navigation-principale">
+        ☰
+      </button>
 
-<!-- SECTION 1 : INTRO -->
-<section>
-  <h1>Bilan de la mémoire à Châlons-en-Champagne</h1>
-
-  <p>
-    Le cabinet de psychologie et neuropsychologie propose des bilans de la mémoire pour les enfants, adolescents et adultes.
-    Ces évaluations permettent d’identifier l’origine des difficultés mnésiques et de mieux comprendre le fonctionnement cognitif.
-  </p>
-
-  <p>
-    Nous accueillons des patients de Châlons-en-Champagne, Reims, Épernay et Vitry-le-François.
-  </p>
-</section>
-
-<!-- SECTION 2 : CTA -->
-<section>
-  <div class="container">
-    <div class="highlight">
-      <p>Pour prendre rendez-vous, merci de cliquer sur le lien suivant.</p>
-      <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-rdv">Prendre rendez-vous</a>
+      <nav class="main-nav" id="navigation-principale" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="#comprendre">Comprendre la mémoire</a></li>
+          <li><a href="#bilan">Le bilan</a></li>
+          <li><a href="#modalites">Modalités</a></li>
+          <li>
+            <a
+              class="nav-cta"
+              href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+              target="_blank"
+              rel="noopener noreferrer">Prendre rendez-vous</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- SECTION 3 : COMPRENDRE LA MÉMOIRE -->
-<section>
-  <h2>🧠 Comprendre les troubles de la mémoire</h2>
+  <main id="contenu">
 
-  <p>
-    La mémoire est une fonction cognitive essentielle qui intervient dans l’apprentissage, la vie quotidienne et le travail.
-    Une difficulté mnésique peut avoir différentes origines : attentionnelles, émotionnelles ou neurologiques.
-  </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Psychologie · Neuropsychologie</span>
 
-  <ul>
-    <li>Oublis fréquents</li>
-    <li>Difficultés à retenir des informations récentes</li>
-    <li>Sensation de “trous de mémoire”</li>
-    <li>Fatigue mentale importante</li>
-    <li>Difficultés de concentration associées</li>
-  </ul>
-</section>
+          <h1>Bilan de la mémoire à Châlons-en-Champagne</h1>
 
-<!-- SECTION 4 : ENFANT -->
-<section>
-  <h2>👶 Troubles de la mémoire chez l’enfant</h2>
+          <p class="hero-intro">
+            Les oublis et les difficultés à retenir des informations peuvent avoir
+            différentes origines. Un bilan neuropsychologique permet d'examiner le
+            fonctionnement de la mémoire, de l'attention et d'autres fonctions
+            cognitives afin de mieux comprendre les difficultés rencontrées.
+          </p>
 
-  <p>
-    Chez l’enfant, les difficultés de mémoire peuvent impacter les apprentissages scolaires :
-    apprentissage des leçons, compréhension des consignes, automatisation des connaissances.
-  </p>
+          <p class="hero-intro">
+            Le cabinet accueille les adolescents à partir de 12 ans et les adultes
+            à Châlons-en-Champagne, ainsi que les personnes venant notamment de Reims,
+            Épernay et Vitry-le-François.
+          </p>
 
-  <p>
-    Le bilan permet de distinguer un trouble attentionnel, un trouble des apprentissages ou une simple difficulté transitoire.
-  </p>
-</section>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+              target="_blank"
+              rel="noopener noreferrer">Prendre rendez-vous ↗</a>
 
-<!-- SECTION 5 : ADOLESCENT -->
-<section>
-  <h2>🧑‍🎓 Troubles de la mémoire chez l’adolescent</h2>
+            <a class="btn btn-secondary" href="#bilan">
+              Découvrir le déroulement du bilan
+            </a>
+          </div>
 
-  <p>
-    À l’adolescence, les difficultés de mémoire peuvent entraîner une baisse des résultats scolaires,
-    une désorganisation et une perte d’efficacité dans le travail personnel.
-  </p>
+          <p class="hero-note">
+            Cabinet à Châlons-en-Champagne · Consultations sur rendez-vous
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <p>
-    Elles sont parfois associées à un trouble de l’attention (TDAH) ou à une surcharge cognitive.
-  </p>
-</section>
+    <!-- COMPRENDRE LA MÉMOIRE -->
+    <section class="section section-white" id="comprendre">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Mieux comprendre</span>
+          <h2>Comprendre les difficultés de mémoire</h2>
+          <p>
+            La mémoire regroupe plusieurs processus qui permettent d'apprendre,
+            d'enregistrer des informations, de les conserver et de les retrouver.
+            Les difficultés ressenties ne correspondent donc pas toutes au même
+            fonctionnement cognitif.
+          </p>
+        </div>
 
-<!-- SECTION 6 : ADULTE -->
-<section>
-  <h2>👨 Troubles de la mémoire chez l’adulte</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📥</div>
+            <h3>Apprendre et enregistrer</h3>
+            <p>
+              Retenir une consigne, apprendre une leçon ou mémoriser de nouvelles
+              informations peut être difficile, notamment lorsque l'attention est
+              sollicitée ou que les informations sont nombreuses.
+            </p>
+          </article>
 
-  <p>
-    Chez l’adulte, les troubles de la mémoire peuvent être liés au stress, à la fatigue, à un trouble attentionnel
-    ou à une pathologie neurocognitive plus globale.
-  </p>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🗃️</div>
+            <h3>Conserver les informations</h3>
+            <p>
+              Certaines personnes ont le sentiment que les informations apprises
+              s'effacent rapidement ou qu'elles peinent à se rappeler ce qui a été
+              vu, lu ou entendu récemment.
+            </p>
+          </article>
 
-  <p>
-    Le bilan permet d’objectiver les difficultés et de proposer des stratégies adaptées.
-  </p>
-</section>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🔎</div>
+            <h3>Retrouver les souvenirs</h3>
+            <p>
+              Une information peut être connue sans être immédiatement accessible.
+              Les difficultés de récupération peuvent différer de celles qui
+              concernent l'apprentissage ou la conservation.
+            </p>
+          </article>
+        </div>
 
-<!-- SECTION 7 : DÉROULEMENT -->
-<section>
-  <h2>📋 Déroulement du bilan de la mémoire</h2>
+        <div class="text-column" style="margin-top:30px">
+          <h3>Quels signes peuvent motiver une évaluation ?</h3>
 
-  <ul>
-    <li>Entretien clinique approfondi</li>
-    <li>Analyse des plaintes cognitives</li>
-    <li>Tests de mémoire verbale et visuelle</li>
-    <li>Évaluation de l’attention et des fonctions exécutives</li>
-    <li>Restitution détaillée avec recommandations personnalisées</li>
-  </ul>
-</section>
+          <ul class="check-list">
+            <li>Oublis fréquents dans la vie quotidienne.</li>
+            <li>Difficulté à retenir de nouvelles informations.</li>
+            <li>Impression de perdre le fil d'une conversation ou d'une lecture.</li>
+            <li>Difficulté à apprendre ou à restituer des connaissances.</li>
+            <li>Oublis de rendez-vous, de consignes ou de tâches à effectuer.</li>
+            <li>Difficultés de mémoire associées à une fatigue cognitive ou à des problèmes d'attention.</li>
+          </ul>
 
-<!-- SECTION 8 : OBJECTIF -->
-<section>
-  <h2>🎯 Objectif du bilan</h2>
+          <p>
+            Ces manifestations peuvent être influencées par le sommeil, le stress,
+            l'humeur, l'attention, les traitements ou l'état de santé général.
+            Leur présence ne signifie pas nécessairement qu'il existe un trouble
+            neurologique ou neurocognitif.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <p>
-    Le bilan permet de déterminer si les difficultés sont normales, liées au stress ou à un trouble neuropsychologique.
-    Il permet également de proposer des stratégies concrètes d’amélioration au quotidien.
-  </p>
-</section>
+    <!-- ENFANT, ADOLESCENT, ADULTE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Selon la période de vie</span>
+          <h2>Les difficultés de mémoire selon l'âge</h2>
+          <p>
+            L'évaluation tient compte des attentes propres à chaque période de vie,
+            du parcours de la personne et des conséquences concrètes des difficultés.
+          </p>
+        </div>
 
-<!-- SECTION 9 : LOCALISATION -->
-<section>
-  <h2>📍 Cabinet à Châlons-en-Champagne</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧒</div>
+            <h3>Chez l'enfant</h3>
+            <p>
+              Les difficultés peuvent concerner l'apprentissage des leçons,
+              la mémorisation des consignes, l'acquisition des automatismes
+              ou la mobilisation des connaissances en classe.
+            </p>
+            <p style="margin-top:14px">
+              Il importe de distinguer les difficultés de mémorisation de celles
+              qui sont liées à l'attention, au langage ou aux apprentissages.
+            </p>
+          </article>
 
-  <p>
-    Le cabinet est situé au 18 rue Dom. Pérignon, 51000 Châlons-en-Champagne.
-    Il est facilement accessible depuis Reims, Épernay et Vitry-le-François.
-  </p>
-</section>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎒</div>
+            <h3>Chez l'adolescent</h3>
+            <p>
+              La quantité d'informations à apprendre et les exigences d'autonomie
+              augmentent. Les difficultés peuvent apparaître dans la préparation
+              des évaluations, la restitution des connaissances ou l'organisation
+              du travail personnel.
+            </p>
+            <p style="margin-top:14px">
+              L'attention, le sommeil, la charge de travail et les méthodes
+              d'apprentissage peuvent également intervenir.
+            </p>
+          </article>
 
-<!-- SECTION 10 : CTA -->
-<section>
-  <div class="container">
-    <div class="highlight">
-      <p>Pour prendre rendez-vous, merci de cliquer sur le lien suivant.</p>
-      <a href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-rdv">Prendre rendez-vous</a>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧑‍💻</div>
+            <h3>Chez l'adulte</h3>
+            <p>
+              Les plaintes peuvent porter sur les oublis quotidiens, les
+              informations professionnelles, les rendez-vous ou la difficulté
+              à retrouver certains éléments.
+            </p>
+            <p style="margin-top:14px">
+              L'analyse tient compte de l'évolution des difficultés, de leur
+              retentissement et des facteurs médicaux, psychologiques ou
+              environnementaux pertinents.
+            </p>
+          </article>
+        </div>
+
+        <p style="margin-top:25px; color:var(--muted)">
+          Le cabinet reçoit les adolescents à partir de 12 ans et les adultes.
+          Pour un enfant plus jeune, une orientation vers un professionnel ou
+          une structure adaptée à son âge peut être discutée.
+        </p>
+      </div>
+    </section>
+
+    <!-- DÉROULEMENT -->
+    <section class="section section-white" id="bilan">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">La démarche d'évaluation</span>
+          <h2>Comment se déroule un bilan de la mémoire ?</h2>
+          <p>
+            Le bilan est adapté à la demande. Il ne se limite pas à mesurer la
+            mémoire : il examine également les facteurs cognitifs et contextuels
+            susceptibles d'influencer les performances.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <h3>Entretien clinique</h3>
+            <p>
+              Précision de la demande, description des difficultés, contexte
+              d'apparition, évolution et retentissement dans la vie quotidienne,
+              scolaire ou professionnelle.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Choix des épreuves</h3>
+            <p>
+              Sélection des outils adaptés à l'âge, à la question clinique et aux
+              capacités sensorielles, linguistiques et cognitives de la personne.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Évaluation cognitive</h3>
+            <p>
+              Selon les besoins, exploration de la mémoire verbale et visuelle,
+              de l'apprentissage, du rappel, de la reconnaissance, de l'attention
+              et des fonctions exécutives.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Analyse et restitution</h3>
+            <p>
+              Interprétation des résultats en tenant compte de l'entretien,
+              du fonctionnement quotidien et des autres facteurs pertinents,
+              puis recommandations individualisées.
+            </p>
+          </article>
+        </div>
+
+        <div class="text-column" style="margin-top:30px">
+          <h3>Les fonctions qui peuvent être explorées</h3>
+
+          <ul class="check-list">
+            <li><strong>Mémoire verbale :</strong> apprentissage et rappel d'informations présentées oralement.</li>
+            <li><strong>Mémoire visuelle :</strong> mémorisation et restitution d'informations visuelles.</li>
+            <li><strong>Mémoire de travail :</strong> maintien temporaire et manipulation d'informations.</li>
+            <li><strong>Attention :</strong> concentration et mobilisation des ressources nécessaires à l'apprentissage.</li>
+            <li><strong>Fonctions exécutives :</strong> organisation, planification et stratégies de recherche ou de récupération.</li>
+          </ul>
+
+          <p>
+            Les épreuves sont choisies en fonction de la demande : toutes les
+            composantes ne nécessitent pas systématiquement une exploration
+            approfondie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIFS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Après l'évaluation</span>
+          <h2>Que permet le bilan neuropsychologique ?</h2>
+          <p>
+            Le bilan contribue à caractériser les difficultés observées et à
+            identifier des pistes pour faciliter les apprentissages et les
+            activités du quotidien.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧩</div>
+            <h3>Mieux comprendre les difficultés</h3>
+            <p>
+              Mettre en perspective les performances mnésiques avec l'attention,
+              les autres fonctions cognitives, le contexte de vie et la demande
+              initiale.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📝</div>
+            <h3>Développer des stratégies</h3>
+            <p>
+              Envisager des outils de mémorisation, des méthodes d'apprentissage,
+              des supports externes et des routines adaptés aux besoins.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧭</div>
+            <h3>Orienter la prise en charge</h3>
+            <p>
+              Déterminer si des adaptations, un accompagnement complémentaire
+              ou un avis médical sont pertinents au regard des résultats et
+              du contexte clinique.
+            </p>
+          </article>
+        </div>
+
+        <div class="text-column" style="margin-top:30px">
+          <p>
+            Un bilan neuropsychologique ne permet pas, à lui seul, d'exclure ou
+            de confirmer toutes les causes médicales possibles des troubles de
+            mémoire. Lorsque les difficultés sont nouvelles, s'aggravent ou
+            suscitent une inquiétude médicale, un avis auprès du médecin traitant
+            est important.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALITÉS -->
+    <section class="section section-white" id="modalites">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Informations pratiques</span>
+          <h2>Modalités de l'évaluation</h2>
+        </div>
+
+        <div class="quote-panel">
+          <h3>Une démarche adaptée à chaque situation</h3>
+
+          <p>
+            Les besoins varient selon la nature des plaintes, l'âge, l'histoire
+            clinique et les fonctions cognitives à explorer. Le contenu de
+            l'évaluation est donc défini individuellement.
+          </p>
+
+          <p>
+            <strong>La prestation est proposée uniquement sur devis personnalisé,</strong>
+            établi après un premier échange permettant de préciser la demande
+            et les modalités de l'évaluation envisagée.
+          </p>
+
+          <p>
+            La prise de rendez-vous s'effectue en ligne. Les étapes de la démarche
+            sont discutées avec le cabinet en fonction de la situation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <div>
+          <h2>Vous souhaitez faire le point sur des difficultés de mémoire ?</h2>
+          <p>
+            Prenez rendez-vous pour présenter votre demande et déterminer si
+            une évaluation neuropsychologique est pertinente dans votre situation.
+          </p>
+        </div>
+
+        <a
+          class="btn"
+          href="https://perfactive.fr/neuropsychologue/chalons-en-champagne/julien-cravero"
+          target="_blank"
+          rel="noopener noreferrer">Prendre rendez-vous ↗</a>
+      </div>
+    </section>
+
+    <!-- LOCALISATION -->
+    <section class="section" id="localisation">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Accès au cabinet</span>
+          <h2>Bilan mémoire à Châlons-en-Champagne</h2>
+          <p>
+            Le cabinet est situé à Châlons-en-Champagne, dans la Marne. Il accueille
+            notamment les personnes venant de Châlons-en-Champagne, Reims, Épernay
+            et Vitry-le-François.
+          </p>
+        </div>
+
+        <div class="location-box">
+          <div class="location-details">
+            <h3>Cabinet Cravero</h3>
+
+            <p>
+              <strong>Adresse</strong><br>
+              18 rue Dom. Pérignon<br>
+              51000 Châlons-en-Champagne
+            </p>
+
+            <p>
+              <strong>Consultations</strong><br>
+              Sur rendez-vous.
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.google.com/maps/search/?api=1&query=18+rue+Dom+P%C3%A9rignon+51000+Ch%C3%A2lons-en-Champagne"
+              target="_blank"
+              rel="noopener noreferrer">Itinéraire ↗</a>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="Localisation du cabinet de neuropsychologie à Châlons-en-Champagne"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83826.1611855049!2d4.322825!3d48.96172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ebdf8679a49ae9%3A0xdf5cf80e3b6902c6!2sCabinet%20Neuropsychologue%20Cravero!5e0!3m2!1sfr!2sfr!4v1775661170406!5m2!1sfr!2sfr"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-white" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Questions fréquentes</span>
+          <h2>Questions sur le bilan de la mémoire</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Les oublis sont-ils toujours le signe d'un trouble de la mémoire ?</summary>
+            <div class="faq-answer">
+              <p>
+                Non. Les oublis peuvent notamment être liés à une difficulté
+                d'attention au moment de l'apprentissage, au stress, au manque
+                de sommeil ou à une surcharge cognitive. L'entretien et les
+                épreuves permettent d'explorer ces différentes pistes.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Le bilan est-il utile chez l'adulte ?</summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Une évaluation peut aider à caractériser les difficultés,
+                à examiner les fonctions cognitives concernées et à déterminer
+                les suites utiles. Selon le contexte, un avis médical peut
+                également être nécessaire.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Combien de temps dure un bilan ?</summary>
+            <div class="faq-answer">
+              <p>
+                La durée dépend de la demande, des fonctions à explorer et des
+                investigations nécessaires. Les modalités sont précisées lors
+                des premiers échanges.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Faut-il une ordonnance pour prendre rendez-vous ?</summary>
+            <div class="faq-answer">
+              <p>
+                Vous pouvez contacter directement le cabinet. Si les difficultés
+                sont récentes, s'aggravent ou évoquent une cause médicale, il est
+                important de consulter également un médecin.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Le bilan permet-il de diagnostiquer une maladie neurologique ?</summary>
+            <div class="faq-answer">
+              <p>
+                Le bilan décrit le fonctionnement cognitif et peut contribuer
+                à l'analyse clinique, mais il ne remplace pas une évaluation
+                médicale. Le diagnostic d'une maladie neurologique nécessite,
+                lorsque cela est indiqué, une démarche médicale complémentaire.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Que se passe-t-il après le bilan ?</summary>
+            <div class="faq-answer">
+              <p>
+                Les résultats sont restitués et expliqués. Des recommandations
+                adaptées peuvent être proposées, par exemple des stratégies de
+                mémorisation, des adaptations du quotidien ou une orientation
+                vers un autre professionnel si nécessaire.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        © <span id="annee"></span> Cabinet Cravero · Psychologie et neuropsychologie
+      </p>
+      <p><a href="../index.html">Retour à l’accueil</a></p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- SECTION 11 : FAQ -->
-<section>
-  <h2>❓ Questions fréquentes</h2>
+  <script>
+    (() => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".main-nav");
 
-  <p><strong>Les troubles de la mémoire sont-ils toujours graves ?</strong><br>
-  Non, ils peuvent être liés au stress, à la fatigue ou à un trouble attentionnel.</p>
+      if (toggle && nav) {
+        const closeMenu = () => {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Ouvrir le menu");
+          toggle.textContent = "☰";
+        };
 
-  <p><strong>Le bilan est-il utile chez l’adulte ?</strong><br>
-  Oui, il permet de comprendre précisément l’origine des difficultés.</p>
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
 
-  <p><strong>Combien de temps dure un bilan ?</strong><br>
-  En général entre 2 et 4 heures selon les besoins.</p>
-</section>
+          toggle.setAttribute("aria-expanded", String(isOpen));
+          toggle.setAttribute(
+            "aria-label",
+            isOpen ? "Fermer le menu" : "Ouvrir le menu"
+          );
+          toggle.textContent = isOpen ? "✕" : "☰";
+        });
 
-<script src="../scripts/toggle.js"></script>
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeMenu();
+            toggle.focus();
+          }
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            nav.classList.contains("is-open") &&
+            !nav.contains(event.target) &&
+            !toggle.contains(event.target)
+          ) {
+            closeMenu();
+          }
+        });
+      }
+
+      const year = document.getElementById("annee");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>
